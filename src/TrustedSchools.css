@@ -1,0 +1,147 @@
+.trusted-schools {
+  width: 100%;
+  padding: 14px 0 35px;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.trusted-schools__title {
+  margin: 0 16px 39px;
+  color: #004f9e;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Visible carousel area */
+.trusted-schools__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Moving track */
+.trusted-schools__track {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
+  width: max-content;
+  animation: trusted-schools-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+/* Keep the original card design */
+.trusted-schools__card {
+  flex: 0 0 calc((100vw - 128px) / 5);
+  min-width: 0;
+  min-height: 182px;
+  padding: 20px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f6f0ff;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.trusted-schools__logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.trusted-schools__name {
+  margin: 17px 0 0;
+  color: #111111;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+/* Move the cards continuously from right to left */
+@keyframes trusted-schools-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 16px));
+  }
+}
+
+/* Pause the carousel when the user hovers over it */
+.trusted-schools__viewport:hover .trusted-schools__track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 1100px) {
+  .trusted-schools__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .trusted-schools__track {
+    gap: 20px;
+  }
+
+  .trusted-schools__card {
+    flex-basis: 220px;
+  }
+
+  @keyframes trusted-schools-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - 10px));
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .trusted-schools {
+    padding-top: 20px;
+  }
+
+  .trusted-schools__title {
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 16px 24px;
+  }
+
+  .trusted-schools__track {
+    gap: 14px;
+  }
+
+  .trusted-schools__card {
+    flex-basis: 190px;
+    min-height: 176px;
+  }
+
+  .trusted-schools__name {
+    font-size: 16px;
+  }
+
+  @keyframes trusted-schools-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - 7px));
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trusted-schools__track {
+    animation: none;
+  }
+}

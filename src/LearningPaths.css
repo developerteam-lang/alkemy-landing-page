@@ -1,0 +1,341 @@
+.learning-paths {
+  width: 100%;
+  padding: 15px 16px 4px;
+  background: linear-gradient(110deg, #fffdfa 0%, #fff8ef 100%);
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.learning-paths *,
+.learning-paths *::before,
+.learning-paths *::after {
+  box-sizing: border-box;
+}
+
+.learning-paths__eyebrow {
+  margin-bottom: 8px;
+  text-align: center;
+  color: #111111;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+
+.learning-paths__title {
+  margin: 0 0 19px;
+  text-align: center;
+  color: #004f9e;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Main comparison table */
+.learning-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #310078;
+  border-radius: 9px;
+  background: #ffffff;
+  font-size: 8px;
+}
+
+/* Three plan columns plus the left label column */
+.learning-table__header,
+.learning-table__descriptions,
+.learning-table__row,
+.learning-table__footer {
+  display: grid;
+  grid-template-columns: 25% repeat(3, 25%);
+}
+
+.learning-table__empty {
+  min-width: 0;
+  background: #ffffff;
+  border-right: 1px solid #858585;
+}
+
+.learning-table__plan {
+  min-width: 0;
+  min-height: 78px;
+  padding: 12px 11px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-right: 1px solid #e1e1e1;
+}
+
+.learning-table__plan:last-child {
+  border-right: 0;
+}
+
+.learning-table__plan--featured {
+  background: #f6efff;
+}
+
+.learning-table__badge {
+  display: inline-block;
+  margin: 0 0 4px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  background: #310078;
+  color: #ffffff;
+  font-size: 6px;
+  line-height: 1.1;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.learning-table__plan h3 {
+  margin: 0 0 3px;
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.learning-table__duration {
+  margin: 0 0 5px;
+  font-size: 7px;
+  line-height: 1.2;
+}
+
+.learning-table__price {
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.learning-table__price small {
+  font-size: 7px;
+  font-weight: 400;
+}
+
+/* Description row */
+.learning-table__descriptions {
+  min-height: 43px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.learning-table__label {
+  min-width: 0;
+  padding: 9px 11px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #858585;
+  font-size: 7px;
+  line-height: 1.3;
+}
+
+.learning-table__description {
+  min-width: 0;
+  padding: 7px 11px;
+  border-right: 1px solid #e1e1e1;
+  font-size: 7px;
+  line-height: 1.45;
+}
+
+.learning-table__description:last-child {
+  border-right: 0;
+}
+
+.learning-table__description--featured {
+  background: #f6efff;
+}
+
+/* Gray category separators */
+.learning-table__section-title {
+  min-height: 18px;
+  padding: 5px 11px;
+  display: flex;
+  align-items: center;
+  background: #eeeeee;
+  border-bottom: 1px solid #dddddd;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+/* Comparison rows */
+.learning-table__row {
+  min-height: 23px;
+  border-bottom: 1px solid #dfe3e9;
+}
+
+.learning-table__row:last-child {
+  border-bottom: 0;
+}
+
+.learning-table__row .learning-table__label {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.learning-table__value {
+  min-width: 0;
+  padding: 5px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid #e5e5e5;
+  font-size: 7px;
+  line-height: 1.3;
+}
+
+.learning-table__value:last-child {
+  border-right: 0;
+}
+
+.learning-table__value--featured {
+  background: #f6efff;
+}
+
+.learning-table__check {
+  color: #16a085;
+  font-size: 9px;
+}
+
+.learning-table__dash {
+  color: #9ca3af;
+}
+
+/* Enroll button row */
+.learning-table__footer {
+  min-height: 42px;
+}
+
+.learning-table__enroll {
+  min-width: 0;
+  padding: 7px 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learning-table__enroll--featured {
+  background: #f6efff;
+}
+
+.learning-table__button {
+  min-height: 25px;
+  width: 100%;
+  max-width: 105px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.learning-table__button:hover {
+  transform: translateY(-1px);
+}
+
+.learning-table__button--foundation,
+.learning-table__button--mastery {
+  background: #edddff;
+  color: #310078;
+}
+
+.learning-table__button--foundation:hover,
+.learning-table__button--mastery:hover {
+  background: #dfc6ff;
+}
+
+.learning-table__button--accelerator {
+  background: #310078;
+  color: #ffffff;
+}
+
+.learning-table__button--accelerator:hover {
+  background: #4b1398;
+}
+
+/* Early bird countdown */
+.learning-countdown {
+  min-height: 37px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 10px;
+}
+
+.learning-countdown strong {
+  color: #008000;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.learning-countdown__timer {
+  padding: 3px 6px;
+  border: 1px solid #806700;
+  border-radius: 2px;
+  background: #ffdf43;
+  color: #222222;
+  font-size: 10px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tablet */
+@media (max-width: 650px) {
+  .learning-paths {
+    padding: 20px 10px 12px;
+  }
+
+  .learning-paths__title {
+    margin-bottom: 18px;
+    font-size: 23px;
+  }
+
+  .learning-table {
+    overflow-x: auto;
+  }
+
+  .learning-table__header,
+  .learning-table__descriptions,
+  .learning-table__row,
+  .learning-table__footer {
+    min-width: 550px;
+  }
+
+  .learning-table__plan {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .learning-table__description {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+  .learning-paths__title {
+    font-size: 21px;
+  }
+
+  .learning-countdown {
+    gap: 5px;
+  }
+
+  .learning-countdown strong,
+  .learning-countdown__timer {
+    font-size: 9px;
+  }
+}

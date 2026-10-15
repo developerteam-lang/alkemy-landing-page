@@ -1,0 +1,224 @@
+
+.ai-highlights {
+  width: 100%;
+  padding: 26px 29px 28px;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ai-highlights *,
+.ai-highlights *::before,
+.ai-highlights *::after {
+  box-sizing: border-box;
+}
+
+.ai-highlights__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px 19px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* All cards */
+.highlight-card {
+  position: relative;
+  grid-column: span 2;
+  height: 151px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 13px;
+  background: #f6efff;
+}
+
+.highlight-card__text {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 16px 16px 0;
+  color: #08070b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.25px;
+}
+
+/* Purple curved area at the bottom-right */
+.highlight-card__decoration {
+  position: absolute;
+  z-index: 0;
+  right: -18px;
+  bottom: -78px;
+  width: 230px;
+  height: 130px;
+  border-radius: 55% 0 0 0;
+  background: #ffd500;
+  transform: rotate(-3deg);
+}
+
+/* 3D-style illustration */
+.highlight-card__illustration {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 112px;
+  height: 115px;
+  pointer-events: none;
+}
+
+.highlight-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 5px 3px rgba(64, 30, 117, 0.12));
+}
+
+/* First row: 3 cards */
+.highlight-card--learning,
+.highlight-card--videos,
+.highlight-card--access {
+  grid-column: span 2;
+}
+
+/* Second row: 2 wider cards */
+.highlight-card--projects,
+.highlight-card--tools {
+  grid-column: span 3;
+  height: 151px;
+}
+
+.highlight-card--projects .highlight-card__decoration {
+  right: -5px;
+  bottom: -86px;
+  width: 240px;
+  height: 135px;
+}
+
+.highlight-card--projects .highlight-card__illustration {
+  right: 8px;
+  bottom: 0;
+  width: 124px;
+  height: 112px;
+}
+
+.highlight-card--tools .highlight-card__decoration {
+  right: -5px;
+  bottom: -91px;
+  width: 260px;
+  height: 145px;
+}
+
+.highlight-card--tools .highlight-card__illustration {
+  right: 5px;
+  bottom: 0;
+  width: 145px;
+  height: 115px;
+}
+
+/* Fine-tune text wrapping for the first three cards */
+.highlight-card--learning .highlight-card__text {
+  max-width: 265px;
+}
+
+.highlight-card--videos .highlight-card__text {
+  max-width: 280px;
+}
+
+.highlight-card--access .highlight-card__text {
+  max-width: 290px;
+}
+
+.highlight-card--projects .highlight-card__text {
+  max-width: 420px;
+}
+
+.highlight-card--tools .highlight-card__text {
+  max-width: 450px;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+  .ai-highlights {
+    padding: 22px;
+  }
+
+  .ai-highlights__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .highlight-card--learning,
+  .highlight-card--videos,
+  .highlight-card--access,
+  .highlight-card--projects,
+  .highlight-card--tools {
+    grid-column: span 1;
+    height: 155px;
+  }
+
+  .highlight-card__text {
+    padding: 15px 14px 0;
+    font-size: 14px;
+  }
+
+  .highlight-card__illustration {
+    right: 2px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .highlight-card--projects .highlight-card__illustration,
+  .highlight-card--tools .highlight-card__illustration {
+    width: 105px;
+    height: 100px;
+  }
+
+  .highlight-card__decoration {
+    width: 190px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .ai-highlights {
+    padding: 18px 15px;
+  }
+
+  .ai-highlights__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .highlight-card--learning,
+  .highlight-card--videos,
+  .highlight-card--access,
+  .highlight-card--projects,
+  .highlight-card--tools {
+    grid-column: 1;
+    height: 145px;
+  }
+
+  .highlight-card__text {
+    max-width: calc(100% - 45px);
+    padding: 15px 15px 0;
+    font-size: 15px;
+  }
+
+  .highlight-card__illustration {
+    right: 5px;
+    width: 105px;
+    height: 105px;
+  }
+
+  .highlight-card--projects .highlight-card__illustration,
+  .highlight-card--tools .highlight-card__illustration {
+    width: 112px;
+    height: 105px;
+  }
+}

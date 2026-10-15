@@ -1,0 +1,552 @@
+
+/* Main hero section */
+.winter-hero {
+  --winter-purple: #31006f;
+  --winter-blue:#004f9e;
+  --winter-yellow:yellowgreen;
+  --winter-card: #493071;
+  --winter-lilac: #c9a2ff;
+  --winter-cream: #fffbf6;
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: #090909;
+  background-color: var(--winter-cream);
+  background-image:
+    linear-gradient(to right, rgba(80, 65, 50, 0.075) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(80, 65, 50, 0.075) 1px, transparent 1px);
+  background-size: 43px 43px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Decorative pale yellow wave */
+.winter-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -4%;
+  top: 48%;
+  width: 110%;
+  height: 200px;
+  pointer-events: none;
+  opacity: 0.8;
+  background: #fff0c9;
+  clip-path: polygon(
+    0 0,
+    10% 20%,
+    23% 48%,
+    36% 80%,
+    46% 100%,
+    56% 82%,
+    67% 45%,
+    76% 25%,
+    86% 48%,
+    100% 82%,
+    100% 97%,
+    86% 65%,
+    76% 43%,
+    67% 63%,
+    56% 100%,
+    46% 100%,
+    36% 94%,
+    23% 62%,
+    10% 34%,
+    0 14%
+  );
+}
+
+.winter-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(390px, 0.9fr);
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 525px;
+  margin: 0 auto;
+  padding: 16px 5.45% 28px;
+  box-sizing: border-box;
+}
+
+/* LEFT COLUMN */
+.winter-hero__left {
+  min-width: 0;
+}
+
+.winter-hero__title {
+  margin: 0 0 13px;
+  color: var(--winter-blue);
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+}
+
+/* Information pills */
+.winter-hero__pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 9px;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+.winter-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 31px;
+  padding: 6px 13px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 30px;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.winter-pill--purple {
+  border-color: #6900ff;
+  color: #111;
+}
+
+.winter-pill--blue{
+  border-color:#004f9e;
+  color:#111;
+}
+
+.winter-pill--red {
+  border-color: #ff2525;
+  color: #111;
+}
+
+.winter-pill--yellow{
+  border-color:yellowgreen;
+  color:#111;
+}
+
+.winter-pill__icon {
+  display: inline-block;
+  flex: 0 0 13px;
+  width: 13px;
+  height: 13px;
+}
+
+/* Benefits */
+.winter-hero__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 37px;
+}
+
+.winter-benefit {
+  display: grid;
+  grid-template-columns: 33px minmax(0, 1fr);
+  align-items: center;
+  gap: 11px;
+}
+
+.winter-benefit__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #004f9e;
+  border-radius: 7px;
+  background: #e9e2f8;
+  color: var(--winter-purple);
+  transform: rotate(45deg);
+}
+
+.winter-benefit__icon svg {
+  width: 17px;
+  height: 17px;
+  transform: rotate(-45deg);
+}
+
+.winter-benefit p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+.winter-benefit strong {
+  font-weight: 700;
+}
+
+/* Enrollment CTA */
+.winter-hero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 436px;
+  min-height: 47px;
+  padding: 10px 20px;
+  border-radius: 35px;
+  background: var(--winter-blue);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.winter-hero__cta:hover {
+  background: var(--winter-blue);
+  transform: translateY(-1px);
+}
+
+.winter-hero__cta-arrow {
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Countdown */
+.winter-hero__countdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.winter-hero__countdown-label {
+  color: #00852b;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.winter-hero__countdown-time {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  padding: 3px 9px;
+  border: 1px solid #322300;
+  border-radius: 3px;
+  background: #ffdf38;
+  color: #171000;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* RIGHT COLUMN */
+.winter-hero__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.winter-carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) 145px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 490px;
+}
+
+/* Purple carousel card */
+.winter-carousel__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 260px;
+  padding: 28px 17px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--winter-blue);
+  box-shadow: 0 18px 32px rgba(49, 0, 111, 0.18);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.winter-carousel__card::before {
+  content: "";
+  position: absolute;
+  top: -27px;
+  left: 5%;
+  width: 90%;
+  height: 16px;
+  border-radius: 12px 12px 0 0;
+  background: #72599b;
+  box-shadow: 0 12px 0 #60418b;
+}
+
+.winter-carousel__card-content {
+  width: 100%;
+  animation: winterFadeIn 0.25s ease;
+}
+
+.winter-carousel__card h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.winter-carousel__card p {
+  margin: 0;
+  color: #e4dced;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+@keyframes winterFadeIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vertical navigation and arrows */
+.winter-carousel__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 21px;
+  min-width: 0;
+}
+
+.winter-carousel__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 33px;
+  width: 33px;
+  height: 33px;
+  padding: 7px;
+  border: 1px solid var(--winter-blue);
+  border-radius: 50%;
+  background: #fffdf9;
+  color: var(--winter-blue);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.winter-carousel__arrow:hover {
+  background: var(--winter-blue);
+  color: #fff;
+}
+
+
+.winter-carousel__arrow svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.winter-carousel__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  width: 100%;
+}
+
+.winter-carousel__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #85808a;
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.3;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.winter-carousel__dot {
+  display: block;
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d2b0ff;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.winter-carousel__nav-item--active {
+  color: #111;
+  font-weight: 700;
+}
+
+.winter-carousel__nav-item--active .winter-carousel__dot {
+  background: var(--winter-blue);
+  transform: scale(1.05);
+}
+
+/* TABLETS */
+@media (max-width: 1000px) {
+  .winter-hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
+    gap: 25px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .winter-hero__title {
+    font-size: clamp(34px, 4.2vw, 44px);
+  }
+
+  .winter-carousel {
+    grid-template-columns: minmax(0, 1fr) 125px;
+    gap: 10px;
+  }
+
+  .winter-carousel__card {
+    min-height: 280px;
+    padding: 22px 14px;
+  }
+
+  .winter-carousel__nav-item {
+    font-size: 11px;
+  }
+
+  .winter-hero__pills {
+    margin-bottom: 28px;
+  }
+
+  .winter-hero__benefits {
+    margin-bottom: 28px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .winter-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+    min-height: auto;
+    padding: 30px 20px 35px;
+  }
+
+  .winter-hero__title {
+    font-size: clamp(35px, 8vw, 48px);
+    letter-spacing: -1.3px;
+  }
+
+  .winter-hero__pills {
+    gap: 9px;
+    margin-bottom: 30px;
+  }
+
+  .winter-pill {
+    white-space: normal;
+    font-size: 11px;
+  }
+
+  .winter-hero__benefits {
+    gap: 17px;
+    margin-bottom: 30px;
+  }
+
+  .winter-benefit {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .winter-benefit p {
+    font-size: 12px;
+  }
+
+  .winter-hero__cta {
+    max-width: 100%;
+  }
+
+  .winter-hero__right {
+    width: 100%;
+  }
+
+  .winter-carousel {
+    grid-template-columns: minmax(0, 1fr) 125px;
+    gap: 14px;
+    max-width: 490px;
+  }
+
+  .winter-carousel__card {
+    min-height: 250px;
+  }
+
+  .winter-carousel__card h2 {
+    font-size: 19px;
+  }
+
+  .winter-carousel__card p {
+    font-size: 12px;
+  }
+
+  .winter-carousel__controls {
+    gap: 20px;
+  }
+
+  .winter-carousel__nav {
+    gap: 22px;
+  }
+
+  .winter-hero::before {
+    top: 58%;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+  .winter-hero__inner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .winter-carousel {
+    grid-template-columns: minmax(0, 1fr) 108px;
+    gap: 10px;
+  }
+
+  .winter-carousel__nav-item {
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .winter-carousel__card {
+    padding: 20px 12px;
+  }
+
+  .winter-hero__countdown-time {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.schedule-section {
+  width: 100%;
+  background: #ffffff;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.schedule-container {
+  width: min(600px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 19px 0 51px;
+}
+
+.schedule-eyebrow {
+  margin: 0 0 7px;
+  text-align: center;
+  color: #111827;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+}
+
+.schedule-heading {
+  margin: 0 0 18px;
+  color: #004f9e;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+  text-align: center;
+}
+
+.schedule-weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.week-card {
+  min-height: 42px;
+  padding: 10px 13px;
+  border: 1px solid #e3d8f2;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+}
+
+.week-details {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.week-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 16px;
+  padding: 0 7px;
+  border: 1px solid #6d16ff;
+  border-radius: 20px;
+  color: #5700d6;
+  font-size: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.schedule-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.calendar-icon {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: #111827;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.date-divider {
+  width: 1px;
+  height: 13px;
+  background: #ded7e8;
+  flex-shrink: 0;
+}
+
+.date-range {
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.time-slots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.time-pill {
+  min-height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 3px 7px;
+  border-radius: 20px;
+  background: #fff5df;
+  color: #30271b;
+  font-size: 7px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.time-icon {
+  font-size: 9px;
+  line-height: 1;
+}
+
+.celebration-card {
+  position: relative;
+  min-height: 73px;
+  margin-top: 7px;
+  padding: 11px 13px;
+  border: 1px solid #e3d8f2;
+  border-radius: 7px;
+  background: #f7f0ff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.celebration-content {
+  min-width: 0;
+}
+
+.celebration-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 7px;
+  border-radius: 20px;
+  background: #fce4e8;
+  color: #c42d48;
+  font-size: 6px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.celebration-content h2 {
+  margin: 10px 0 3px;
+  color: #17152a;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.celebration-content p {
+  margin: 0;
+  color: #454052;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.celebration-time {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 110px;
+  min-height: 20px;
+  margin-top: 0;
+  padding: 4px 10px;
+  border: 1px solid #e8dff1;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #c42143;
+  font-size: 7px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.schedule-footer {
+  width: 100%;
+  height: 12px;
+  background: #fff4e4;
+}
+
+/* Responsive layout */
+@media (max-width: 560px) {
+  .schedule-container {
+    width: calc(100% - 28px);
+    padding-top: 24px;
+    padding-bottom: 36px;
+  }
+
+  .schedule-heading {
+    font-size: clamp(19px, 5vw, 24px);
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+
+  .week-card {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .week-details {
+    gap: 7px;
+  }
+
+  .time-slots {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+
+  .time-pill {
+    font-size: 8px;
+    min-height: 22px;
+  }
+
+  .celebration-card {
+    flex-direction: column-reverse;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .celebration-time {
+    align-self: flex-start;
+  }
+
+  .celebration-content h2 {
+    font-size: 12px;
+  }
+
+  .celebration-content p {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .week-details {
+    flex-wrap: wrap;
+  }
+
+  .date-range,
+  .schedule-date {
+    font-size: 9px;
+  }
+
+  .time-slots {
+    gap: 5px;
+  }
+}

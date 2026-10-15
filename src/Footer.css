@@ -1,0 +1,168 @@
+
+/* Footer background */
+.toi-footer {
+  width: 100%;
+  min-height: 128px;
+  background-color: #004f9e;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.toi-footer *,
+.toi-footer *::before,
+.toi-footer *::after {
+  box-sizing: border-box;
+}
+
+/* Main footer layout */
+.toi-footer__inner {
+  width: 100%;
+  max-width: 1336px;
+  min-height: 128px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+/* LEFT SIDE */
+.toi-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Times of India logo */
+.toi-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.toi-footer__logo-box {
+  width: 31px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: #e51d2a;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.toi-footer__logo-text {
+  color: #f6f3f3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+}
+
+/* Copyright */
+.toi-footer__copyright {
+  margin: 0;
+  color: #8ba9c8;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* RIGHT SIDE */
+.toi-footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.toi-footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.toi-footer__contact-item:hover {
+  color: #c7a7ff;
+}
+
+.toi-footer__contact-item svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  color: #e3d3ff;
+}
+
+/* TABLET */
+@media (max-width: 700px) {
+  .toi-footer__inner {
+    padding: 27px 24px;
+    gap: 25px;
+  }
+
+  .toi-footer__logo-text {
+    font-size: 19px;
+  }
+
+  .toi-footer__contact-item {
+    font-size: 12px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 520px) {
+  .toi-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    padding: 27px 22px;
+  }
+
+  .toi-footer__brand {
+    width: 100%;
+  }
+
+  .toi-footer__logo-text {
+    font-size: clamp(17px, 5vw, 21px);
+  }
+
+  .toi-footer__contact {
+    gap: 13px;
+  }
+
+  .toi-footer__contact-item {
+    gap: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 350px) {
+  .toi-footer__logo-text {
+    font-size: 16px;
+  }
+
+  .toi-footer__copyright {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.live-classes {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 12px 20px 6px;
+  overflow: hidden;
+  background: #fff;
+  color: #090909;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+}
+.live-classes *, .live-classes *::before, .live-classes *::after { box-sizing: border-box; }
+.live-classes__header { position: relative; z-index: 1; margin: 0 auto 29px; text-align: center; }
+.live-classes__eyebrow { margin: 0 0 10px; font-size: 11px; line-height: 1.2; font-weight: 700; letter-spacing: 1.4px; }
+.live-classes__main-title { margin: 0; color: #004f9e; font-size: clamp(29px, 3vw, 38px); line-height: 1.18; font-weight: 700; letter-spacing: -0.7px; }
+.live-classes__subtitle { margin: 10px 0 0; color: #4c4650; font-size: 15px; line-height: 1.5; }
+.live-classes__panel { position: relative; z-index: 1; width: 100%; max-width: 900px; margin: 0 auto; overflow: hidden; border: 1px solid #310078; border-radius: 18px; background: #fff; }
+.live-classes__tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; padding: 0; border-bottom: 1px solid #310078; }
+.live-classes__tab { min-width: 0; min-height: 52px; padding: 9px 5px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid #310078; border-bottom: 0; border-radius: 18px 18px 0 0; background: #f4eaff; color: #111; cursor: pointer; font-family: inherit; transition: background-color 180ms ease, color 180ms ease; }
+.live-classes__tab:first-child { margin-left: -1px; }
+.live-classes__tab:last-child { margin-right: -1px; }
+.live-classes__tab-week { font-size: 12px; line-height: 1.2; font-weight: 600; }
+.live-classes__tab-subtitle { font-size: 9px; line-height: 1.2; font-weight: 700; letter-spacing: 1px; }
+.live-classes__tab--active { background: #004f9e; color: #fff; }
+.live-classes__tab:focus-visible { outline: 3px solid #9b6bff; outline-offset: -4px; }
+.live-classes__content { padding: 24px 24px 23px; }
+.live-classes__section-title { margin: 0 0 16px; color: #310078; font-size: 21px; line-height: 1.3; font-weight: 700; letter-spacing: -0.3px; }
+.live-classes__sessions { display: flex; flex-direction: column; gap: 18px; }
+.live-classes__session { min-width: 0; min-height: 122px; padding: 15px; display: grid; grid-template-columns: 98px minmax(0, 1fr); align-items: center; gap: 24px; border-radius: 13px; background: #f6f0ff; }
+.live-classes__image { display: block; width: 98px; height: 92px; object-fit: cover; object-position: center; border-radius: 7px; }
+.live-classes__session-content { min-width: 0; }
+.live-classes__session-topline { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.live-classes__session-title { margin: 0; color: #111; font-size: 15px; line-height: 1.35; font-weight: 600; }
+.live-classes__day { flex: 0 0 auto; min-width: 85px; padding: 4px 12px; border: 1px solid #6200ff; border-radius: 20px; color: #111; text-align: center; font-size: 12px; line-height: 1.2; font-weight: 500; }
+.live-classes__description { margin: 5px 0 18px; color: #514a5d; font-size: 12px; line-height: 1.5; }
+.live-classes__tools { display: flex; align-items: center; flex-wrap: wrap; gap: 0; min-height: 16px; }
+.live-classes__tools-label { margin-right: 24px; color: #111; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+.live-classes__tool { padding: 0 18px; color: #514a5d; font-size: 12px; font-weight: 500; }
+.live-classes__tool:first-of-type { padding-left: 0; }
+.live-classes__tool-divider { width: 1px; height: 20px; background: #b8b0c4; }
+.live-classes__decor { position: absolute; z-index: 0; width: 100px; height: 100px; pointer-events: none; background: radial-gradient(circle, #ffe5c5 0%, #fff3e4 42%, rgba(255,243,228,0) 72%); transform: rotate(45deg); }
+.live-classes__decor--top { top: -48px; right: -25px; }
+.live-classes__decor--bottom { bottom: -48px; left: -25px; }
+
+@media (max-width: 760px) {
+  .live-classes { padding: 22px 14px 12px; }
+  .live-classes__header { margin-bottom: 22px; }
+  .live-classes__eyebrow { font-size: 9px; }
+  .live-classes__main-title { font-size: clamp(25px, 5vw, 34px); }
+  .live-classes__subtitle { font-size: 13px; }
+  .live-classes__tabs { gap: 4px; }
+  .live-classes__tab { min-height: 58px; padding: 8px 3px; gap: 5px; border-radius: 12px 12px 0 0; }
+  .live-classes__tab-week { font-size: 10px; }
+  .live-classes__tab-subtitle { font-size: 7px; letter-spacing: 0.3px; }
+  .live-classes__content { padding: 20px 14px 16px; }
+  .live-classes__section-title { font-size: 18px; }
+  .live-classes__session { grid-template-columns: 78px minmax(0, 1fr); gap: 14px; padding: 12px; }
+  .live-classes__image { width: 78px; height: 78px; }
+  .live-classes__session-topline { align-items: flex-start; flex-direction: column-reverse; gap: 7px; }
+  .live-classes__session-title { font-size: 14px; }
+  .live-classes__day { min-width: auto; padding: 3px 11px; font-size: 11px; }
+  .live-classes__description { margin: 7px 0 12px; font-size: 11px; }
+  .live-classes__tools-label { margin-right: 12px; font-size: 10px; }
+  .live-classes__tool { padding: 0 10px; font-size: 11px; }
+}
+@media (max-width: 460px) {
+  .live-classes__tab-subtitle { max-width: 62px; text-align: center; line-height: 1.25; }
+  .live-classes__content { padding: 17px 10px 12px; }
+  .live-classes__session { grid-template-columns: 1fr; gap: 12px; }
+  .live-classes__image { width: 100%; height: 150px; object-fit: contain; background: #e8d9ff; }
+  .live-classes__session-topline { flex-direction: row; align-items: center; }
+  .live-classes__session-title { font-size: 13px; }
+  .live-classes__description { font-size: 12px; }
+}

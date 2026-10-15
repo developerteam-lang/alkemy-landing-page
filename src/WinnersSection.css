@@ -1,0 +1,323 @@
+
+/* Main section */
+.winners-section {
+  width: 100%;
+  padding: 8px 24px 8px;
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.winners-section *,
+.winners-section *::before,
+.winners-section *::after {
+  box-sizing: border-box;
+}
+
+.winners-section__container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.winners-section__header {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.winners-section__eyebrow {
+  margin: 0 0 11px;
+  color: #080808;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 1.6px;
+}
+
+.winners-section__title {
+  margin: 0;
+  color: #004f9e;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+}
+
+.winners-section__subtitle {
+  margin: 9px 0 0;
+  color: #34313a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Three-column video grid */
+.winners-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  animation: winners-fade-in 0.25s ease;
+}
+
+@keyframes winners-fade-in {
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Winner card */
+.winner-card {
+  min-width: 0;
+  padding: 12px 13px 13px;
+  overflow: hidden;
+  border: 1px solid #e2d5f3;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+/* Small class badge */
+.winner-card__badge {
+  display: inline-flex;
+  min-height: 22px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  padding: 3px 9px;
+  border: 1px solid #004f9e;
+  border-radius: 20px;
+  background: #f6f0ff;
+  color: #004f9e;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.15px;
+}
+
+/* Video thumbnail */
+.winner-card__video {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111827;
+  text-decoration: none;
+}
+
+.winner-card__thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.winner-card__video:hover .winner-card__thumbnail {
+  transform: scale(1.035);
+}
+
+/* White circular play button */
+.winner-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: 43px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.winner-card__play svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 3px;
+  color: #3b008b;
+}
+
+.winner-card__video:hover .winner-card__play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.winner-card__video:focus-visible {
+  outline: 3px solid #7b45d6;
+  outline-offset: 3px;
+}
+
+/* Student details */
+.winner-card__details {
+  padding-top: 24px;
+}
+
+.winner-card__details h3 {
+  margin: 0 0 3px;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.winner-card__details p {
+  margin: 0;
+  color: #5c6472;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* Batch pagination */
+.winners-section__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 19px;
+}
+
+.winners-section__pagination-label {
+  margin-right: 4px;
+  color: #3b3151;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.winners-section__page {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #e2d5f3;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #171020;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.winners-section__page:hover {
+  border-color: #004f9e;
+}
+
+.winners-section__page--active {
+  border-color: #004f9e;
+  background: #004f9e;
+  color: #ffffff;
+}
+
+.winners-section__page:focus-visible {
+  outline: 2px solid #8955dc;
+  outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .winners-section {
+    padding: 25px 20px;
+  }
+
+  .winners-section__title {
+    font-size: 32px;
+  }
+
+  .winners-section__subtitle {
+    font-size: 14px;
+  }
+
+  .winners-section__header {
+    margin-bottom: 27px;
+  }
+
+  .winners-section__grid {
+    gap: 12px;
+  }
+
+  .winner-card {
+    padding: 10px;
+  }
+
+  .winner-card__details {
+    padding-top: 17px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .winners-section {
+    padding: 28px 16px;
+  }
+
+  .winners-section__title {
+    font-size: 27px;
+    letter-spacing: -0.5px;
+  }
+
+  .winners-section__eyebrow {
+    font-size: 10px;
+  }
+
+  .winners-section__subtitle {
+    font-size: 13px;
+  }
+
+  .winners-section__header {
+    margin-bottom: 22px;
+  }
+
+  .winners-section__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .winner-card {
+    padding: 12px;
+  }
+
+  .winner-card__badge {
+    margin-bottom: 9px;
+  }
+
+  .winner-card__details {
+    padding-top: 14px;
+  }
+
+  .winner-card__details h3 {
+    font-size: 13px;
+  }
+
+  .winner-card__details p {
+    font-size: 12px;
+  }
+
+  .winners-section__pagination {
+    gap: 9px;
+    margin-top: 23px;
+  }
+
+  .winners-section__page {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+}
