@@ -15,21 +15,21 @@ const weekContent = [
     heading: "Your First Steps To Becoming AI-Smart",
     sessions: [
       {
-        title: "Your Child’s First AI-Powered Tutor",
+        title: "Foundations and Problem Hunt",
         description:
           "Learn to give AI the right instructions and build a personal tutor that explains difficult concepts and answers questions.",
         day: "Saturday",
         tools: ["Gemini", "Claude"],
-        image: "/images/live-classes/ai-tutor.png",
+        image: "/images/live-classes/robot-exploring-ideas.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
-        title: "From Tough Chapters To Smart Study Kits",
+        title: "Prompt Engineering and AI Trust Check",
         description:
           "Turn complex topics and school chapters into easy notes, mind maps, flashcards and practice quizzes.",
         day: "Sunday",
         tools: ["Gemini", "NotebookLM"],
-        image: "/images/live-classes/smart-study-kits.png",
+        image: "/images/live-classes/friendly-robot-ai-trust-check.png",
         imageAlt: "Illustration of educational study materials",
       },
     ],
@@ -37,24 +37,24 @@ const weekContent = [
 
   // WEEK 2 — DIFFERENT CONTENT
   {
-    heading: "Unleash Your Child’s AI Creativity",
+    heading: "Robot Researcher With Laptop and Lightbulb",
     sessions: [
       {
-        title: "Create Amazing Stories With AI",
+        title: "Research And Validation",
         description:
           "Turn your child's ideas into exciting stories, creative characters and imaginative adventures using AI tools.",
         day: "Saturday",
         tools: ["ChatGPT", "Gemini"],
-        image: "/images/live-classes/ai-tutor.png",
+        image: "/images/live-classes/robot-researcher-with-laptop-and-lightbulb.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
-        title: "Design Posters And Visual Masterpieces",
+        title: "UX User Flows And Prototyping",
         description:
           "Explore AI-powered design to create colourful posters, digital artwork and presentations from simple ideas.",
         day: "Sunday",
         tools: ["Canva AI", "Gemini"],
-        image: "/images/live-classes/smart-study-kits.png",
+        image: "/images/live-classes/ux-userflows-and-prototyping.png",
         imageAlt: "Illustration of educational study materials",
       },
     ],
@@ -65,12 +65,12 @@ const weekContent = [
     heading: "Explore Ideas And Build With AI",
     sessions: [
       {
-        title: "Discover How AI Solves Problems",
+        title: "Feature Mapping and Blueprint",
         description:
           "Explore everyday challenges and learn how AI can help generate ideas, compare solutions and think creatively.",
         day: "Saturday",
         tools: ["ChatGPT", "Claude"],
-        image: "/images/live-classes/ai-tutor.png",
+        image: "/images/live-classes/future-mapping-and-blueprint.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
