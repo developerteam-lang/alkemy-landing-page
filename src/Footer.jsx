@@ -1,4 +1,5 @@
 import "./Footer.css";
+
 export default function Footer() {
   return (
     <footer className="toi-footer">
@@ -10,15 +11,20 @@ export default function Footer() {
             className="toi-footer__logo"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="The Times of India"
+            aria-label="Alkemy EdTech"
           >
+            <img
+              src="/logo.png"
+              alt="Alkemy EdTech Logo"
+              className="toi-footer__logo-image"
+            />
             <span className="toi-footer__logo-text">
               ALKEMY EDTECH
-            </span>            
+            </span>
           </a>
 
           <p className="toi-footer__copyright">
-           © 2026 Alkemy EdTech is a brand of AquityX (OPC) Private Limited. All rights reserved.
+            © 2026 Alkemy EdTech is a brand of AquityX (OPC) Private Limited. All rights reserved.
           </p>
         </div>
 

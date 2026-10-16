@@ -17,29 +17,29 @@ const projectsData = {
     tools: ["ChatGPT", "Canva", "Google Flow", "HeyGen", "Suno"],
     projects: [
       {
-        title: "An AI Comic Strip",
+        title: "AI Content Creator tool",
         description: "Turn a story into an illustrated comic",
         image:
-          "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-study-buddy.png",
       },
-      {
-        title: "AI-Designed Poster",
+      { 
+        title: "AI Creator Explorer Tool",
         description: "Create original posters and artwork",
         image:
-          "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-creator-explorer-tool.png",
       },
       {
-        title: "AI Avatar & Video",
-        description: "Bring your own digital character to life",
-        image:
-          "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=500&q=85",
-      },
-      {
-        title: "Original AI Song",
+        title: "AI Research Assistant",
         description: "Write lyrics and compose your own music",
         image:
-          "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-research-assistant.png",
         playable: true,
+      },
+      {
+        title: "Gamified Learning Quiz",
+        description: "Bring your own digital character to life",
+        image:
+          "/images/projects-to-build/gamified-learning-quiz.png",
       },
     ],
   },
@@ -51,28 +51,28 @@ const projectsData = {
     tools: ["ChatGPT", "Canva", "NotebookLM", "Google Flow"],
     projects: [
       {
-        title: "Visual Science Model",
+        title: "AI Trust Check",
         description: "Explain scientific concepts with visuals",
         image:
-          "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-trust-check.png",
       },
       {
-        title: "History Timeline",
+        title: "AI Thinks Case Studies",
         description: "Bring important historical events to life",
         image:
-          "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-thinks-case-studies.png",
       },
       {
-        title: "Smart Study Guide",
+        title: "All Resources",
         description: "Create summaries and revision notes",
         image:
-          "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/all-resources.png",
       },
       {
-        title: "Interactive Quiz",
+        title: "AI For Social Impact",
         description: "Build fun quizzes to test your knowledge",
         image:
-          "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-for-social-impact.png",
       },
     ],
   },
@@ -150,28 +150,28 @@ const projectsData = {
     tools: ["ChatGPT", "Canva", "Figma", "Google Sheets"],
     projects: [
       {
-        title: "Young Entrepreneur",
+        title: "Live Career Guidance Class",
         description: "Turn an idea into a business concept",
         image:
-          "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/live-career-guidance-class.png",
       },
       {
-        title: "AI Researcher",
+        title: "Personalised Career Report",
         description: "Explore a question and present findings",
         image:
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/personalised-career-report.png",
       },
       {
-        title: "Product Designer",
+        title: "Personalised Subject Choice Report",
         description: "Design a solution to a real-world problem",
         image:
-          "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/personalised-subject-choice-report.png",
       },
       {
-        title: "Future Portfolio",
+        title: "Group Career Counselling Session",
         description: "Showcase your skills and achievements",
         image:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/group-career-counselling-session.png",
       },
     ],
   },

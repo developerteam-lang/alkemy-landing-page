@@ -1,4 +1,3 @@
-
 /* Footer background */
 .toi-footer {
   width: 100%;
@@ -38,7 +37,7 @@
   min-width: 0;
 }
 
-/* Times of India logo */
+/* Alkemy EdTech logo and text */
 .toi-footer__logo {
   display: inline-flex;
   align-items: center;
@@ -47,19 +46,14 @@
   text-decoration: none;
 }
 
-.toi-footer__logo-box {
-  width: 31px;
-  height: 31px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  background: #e51d2a;
-  color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+/* Alkemy logo image */
+.toi-footer__logo-image {
+  display: block;
+  width: auto;
+  height: 32px;
+  max-width: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .toi-footer__logo-text {
@@ -125,6 +119,10 @@
     font-size: 19px;
   }
 
+  .toi-footer__logo-image {
+    height: 19px;
+  }
+
   .toi-footer__contact-item {
     font-size: 12px;
   }
@@ -145,6 +143,11 @@
 
   .toi-footer__logo-text {
     font-size: clamp(17px, 5vw, 21px);
+    margin-left: 10px;
+  }
+
+  .toi-footer__logo-image {
+    height: 20px;
   }
 
   .toi-footer__contact {
@@ -160,6 +163,10 @@
 @media (max-width: 350px) {
   .toi-footer__logo-text {
     font-size: 16px;
+  }
+
+  .toi-footer__logo-image {
+    height: 16px;
   }
 
   .toi-footer__copyright {

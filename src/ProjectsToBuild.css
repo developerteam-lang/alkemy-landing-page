@@ -34,7 +34,7 @@
   line-height: 1.25;
   font-weight: 700;
   letter-spacing: -0.65px;
-  color: #410099;
+  color: #004f9e;
 }
 
 .projects-build__subtitle {
@@ -67,7 +67,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border: 1px solid #410099;
+  border: 1px solid #004f9e;
   border-bottom: none;
   border-radius: 12px 12px 0 0;
   background: #f2eafb;
@@ -81,13 +81,15 @@
     color 180ms ease;
 }
 
+
+
 .projects-build__tab:hover {
   background: #e6d7f8;
 }
 
 .projects-build__tab--active,
 .projects-build__tab--active:hover {
-  background: #32006e;
+  background: #004f9e;
   color: #fff;
   font-weight: 700;
 }
@@ -95,7 +97,7 @@
 .projects-build__panel {
   position: relative;
   padding: 17px 16px 15px;
-  border: 1px solid #410099;
+  border: 1px solid #004f9e;
   border-radius: 0 0 12px 12px;
   background: #fff;
 }
@@ -146,7 +148,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
   transition: transform 220ms ease;
 }
 

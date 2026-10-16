@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./AILab.css";
 
-// Change this URL whenever you want to use another video.
-const AI_LAB_VIDEO_URL = "https://tvid.in/r/v.171je3ynz6.mp4";
+// Change this YouTube video ID whenever you want to use another video.
+const AI_LAB_YOUTUBE_VIDEO_ID = "gI-Fke5ZQIA";
 
 const resources = [
   {
@@ -212,22 +212,17 @@ const AILab = () => {
           })}
         </div>
 
-        {/* Right: Autoplay AI Lab video card */}
+        {/* Right: Autoplay YouTube AI Lab video */}
         <aside className="ai-lab__video-card">
           <div className="ai-lab__video-frame">
-            <video
+            <iframe
               className="ai-lab__video"
-              src={AI_LAB_VIDEO_URL}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              controls={false}
-              aria-label="A tour of The AI Lab"
-            >
-              Your browser does not support HTML5 video.
-            </video>
+              src={`https://www.youtube-nocookie.com/embed/${AI_LAB_YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&controls=0&loop=1&playlist=${AI_LAB_YOUTUBE_VIDEO_ID}&playsinline=1&rel=0`}
+              title="Take a Tour of The AI Lab"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
           </div>
 
           <div className="ai-lab__video-content">

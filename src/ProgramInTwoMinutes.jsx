@@ -35,9 +35,26 @@ const ProgramInTwoMinutes = ({
     return null;
   }
 
-  const thumbnail="../images/thumbnail_image.png";
+  const thumbnail = "../images/thumbnail_image.png";
+
   return (
     <section className="program-preview">
+      {/* Full-screen decorative wave */}
+      <svg
+        className="program-preview__wave"
+        viewBox="0 0 1440 220"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M-40 145 C100 245, 180 0, 330 75 S530 200, 690 130 S900 85, 1040 145 S1250 45, 1480 65"
+          fill="none"
+          stroke="#FFF2D1"
+          strokeWidth="22"
+          strokeLinecap="round"
+        />
+      </svg>
+
       <div className="program-preview__heading">
         <p className="program-preview__eyebrow">
           A QUICK LOOK INSIDE
@@ -49,22 +66,6 @@ const ProgramInTwoMinutes = ({
       </div>
 
       <div className="program-preview__video-wrapper">
-        {/* Decorative wave behind the video */}
-        <svg
-          className="program-preview__wave"
-          viewBox="0 0 1440 220"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M-40 145 C100 245, 180 0, 330 75 S530 200, 690 130 S900 85, 1040 145 S1250 45, 1480 65"
-            fill="none"
-            stroke="#FFF2D1"
-            strokeWidth="22"
-            strokeLinecap="round"
-          />
-        </svg>
-
         <div className="program-preview__video">
           {isPlaying ? (
             <iframe
