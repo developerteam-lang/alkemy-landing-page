@@ -5,36 +5,36 @@ import "./MentorsSection.css";
 const mentors = [
   {
     id: 1,
-    name: "Ansh Mehra",
-    role: "Founder",
+    name: "Praveen Kumar",
+    role: "AI Trainer",
     organization: "The Cutting Edge School",
-    image: "/images/trainers/trainer-ansh.png",
+    image: "/images/trainers/praveen-ai-trainer.png",
     bio: "Founder and mentor helping students explore AI through practical, project-led learning.",
-  },
-  {
-    id: 2,
-    name: "Daneesh Bhatena",
-    role: "L&D Enterprise Trainer",
-    organization: "The Cutting Edge School",
-    image: "/images/trainers/trainer-ansh.png",
-    bio: "Enterprise trainer guiding learners through practical skills and hands-on projects.",
-  },
-  {
-    id: 3,
-    name: "Aum Patnaik",
-    role: "L&D Enterprise Trainer",
-    organization: "The Cutting Edge School",
-    image: "/images/trainers/trainer-ansh.png",
-    bio: "Trainer focused on helping students build confidence with AI tools and real-world applications.",
-  },
-  {
-    id: 4,
-    name: "Rohak Arya",
-    role: "L&D Enterprise Trainer",
-    organization: "The Cutting Edge School",
-    image: "/images/trainers/trainer-ansh.png",
-    bio: "Mentor supporting students as they develop creative projects and practical AI skills.",
-  },
+  }
+  // ,{
+  //   id: 2,
+  //   name: "Daneesh Bhatena",
+  //   role: "L&D Enterprise Trainer",
+  //   organization: "The Cutting Edge School",
+  //   image: "/images/trainers/trainer-ansh.png",
+  //   bio: "Enterprise trainer guiding learners through practical skills and hands-on projects.",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Aum Patnaik",
+  //   role: "L&D Enterprise Trainer",
+  //   organization: "The Cutting Edge School",
+  //   image: "/images/trainers/trainer-ansh.png",
+  //   bio: "Trainer focused on helping students build confidence with AI tools and real-world applications.",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Rohak Arya",
+  //   role: "L&D Enterprise Trainer",
+  //   organization: "The Cutting Edge School",
+  //   image: "/images/trainers/trainer-ansh.png",
+  //   bio: "Mentor supporting students as they develop creative projects and practical AI skills.",
+  // },
 ];
 
 function MentorCard({ mentor, onSelect }) {
