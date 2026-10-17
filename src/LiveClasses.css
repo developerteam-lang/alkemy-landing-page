@@ -15,24 +15,49 @@
 .live-classes__eyebrow { margin: 0 0 10px; font-size: 11px; line-height: 1.2; font-weight: 700; letter-spacing: 1.4px; }
 .live-classes__main-title { margin: 0; color: #004f9e; font-size: clamp(29px, 3vw, 38px); line-height: 1.18; font-weight: 700; letter-spacing: -0.7px; }
 .live-classes__subtitle { margin: 10px 0 0; color: #4c4650; font-size: 15px; line-height: 1.5; }
-.live-classes__panel { position: relative; z-index: 1; width: 100%; max-width: 900px; margin: 0 auto; overflow: hidden; border: 1px solid #310078; border-radius: 18px; background: #fff; }
-.live-classes__tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; padding: 0; border-bottom: 1px solid #310078; }
-.live-classes__tab { min-width: 0; min-height: 52px; padding: 9px 5px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid #310078; border-bottom: 0; border-radius: 18px 18px 0 0; background: #f4eaff; color: #111; cursor: pointer; font-family: inherit; transition: background-color 180ms ease, color 180ms ease; }
+.live-classes__panel { 
+  width: 100%; 
+  max-width: 900px; 
+  margin: 0 auto; 
+  /* extra */
+  position: relative; 
+  z-index: 1; 
+  overflow: hidden; 
+  border: 1px solid ; 
+  border-radius: 18px; 
+  background: #fff; 
+}
+.live-classes__tabs {
+  display: grid;
+  padding: 0;
+  /* repeat(5, minmax(0, 1fr))  -> 1.05fr 1fr 1fr 1.05fr 1fr */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  /* 9px -> 12px */
+  gap: 12px;
+  border-bottom: 1px solid #004f9e;
+}
+.live-classes__tab { min-width: 0; min-height: 52px; padding: 9px 5px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid #004f9e; border-bottom: 0; border-radius: 18px 18px 0 0; background: #f4eaff; color: #111; cursor: pointer; font-family: inherit; transition: background-color 180ms ease, color 180ms ease; }
 .live-classes__tab:first-child { margin-left: -1px; }
 .live-classes__tab:last-child { margin-right: -1px; }
+
+/* 
+.live-classes__tab + .live-classes__tab{
+  border-left:none;
+} 
+  */
 .live-classes__tab-week { font-size: 12px; line-height: 1.2; font-weight: 600; }
 .live-classes__tab-subtitle { font-size: 9px; line-height: 1.2; font-weight: 700; letter-spacing: 1px; }
 .live-classes__tab--active { background: #004f9e; color: #fff; }
 .live-classes__tab:focus-visible { outline: 3px solid #9b6bff; outline-offset: -4px; }
 .live-classes__content { padding: 24px 24px 23px; }
-.live-classes__section-title { margin: 0 0 16px; color: #310078; font-size: 21px; line-height: 1.3; font-weight: 700; letter-spacing: -0.3px; }
+.live-classes__section-title { margin: 0 0 16px; color: #004f9e; font-size: 23px; line-height: 1.3; font-weight: 700; letter-spacing: -0.3px; }
 .live-classes__sessions { display: flex; flex-direction: column; gap: 18px; }
 .live-classes__session { min-width: 0; min-height: 122px; padding: 15px; display: grid; grid-template-columns: 98px minmax(0, 1fr); align-items: center; gap: 24px; border-radius: 13px; background: #f6f0ff; }
 .live-classes__image { display: block; width: 98px; height: 92px; object-fit: cover; object-position: center; border-radius: 7px; }
 .live-classes__session-content { min-width: 0; }
 .live-classes__session-topline { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .live-classes__session-title { margin: 0; color: #111; font-size: 15px; line-height: 1.35; font-weight: 600; }
-.live-classes__day { flex: 0 0 auto; min-width: 85px; padding: 4px 12px; border: 1px solid #6200ff; border-radius: 20px; color: #111; text-align: center; font-size: 12px; line-height: 1.2; font-weight: 500; }
+.live-classes__day { flex: 0 0 auto; min-width: 85px; padding: 4px 12px; border: 1px solid #004f9e; border-radius: 20px; color: #111; text-align: center; font-size: 12px; line-height: 1.2; font-weight: 500; }
 .live-classes__description { margin: 5px 0 18px; color: #514a5d; font-size: 12px; line-height: 1.5; }
 .live-classes__tools { display: flex; align-items: center; flex-wrap: wrap; gap: 0; min-height: 16px; }
 .live-classes__tools-label { margin-right: 24px; color: #111; font-size: 11px; font-weight: 700; letter-spacing: 1px; }

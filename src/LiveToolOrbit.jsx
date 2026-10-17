@@ -44,8 +44,8 @@ export default function LiveToolOrbit() {
 
         <div className="tool-orbit-center">
           <p className="tool-orbit-eyebrow">THE GENAI TOOLKIT</p>
-          <h1>15+ Tools to Turn Ideas Into Action</h1>
-          <div className="tool-orbit-pills">
+          <h1 style={{color:"#004f9e"}}>15+ Tools to Turn Ideas Into Action</h1>
+          <div className="tool-orbit-pills" >
             <span><b aria-hidden="true">♧</b> No Paid Subscription Required</span>
             <span><b aria-hidden="true">♧</b> Selected for Safe, Guided Use</span>
           </div>

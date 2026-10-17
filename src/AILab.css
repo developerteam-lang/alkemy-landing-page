@@ -208,6 +208,7 @@
   border-radius: 8px;
   background: #004f9e;
   color: #fff;
+  width:400px;
 }
 
 .ai-lab__video-frame {
@@ -233,7 +234,7 @@
 .ai-lab__video-title {
   margin: 0 0 4px;
   color: #fff;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 1.25;
   font-weight: 700;
   letter-spacing: -0.2px;
@@ -242,7 +243,7 @@
 .ai-lab__video-description {
   margin: 0;
   color: #f2eafc;
-  font-size: 7px;
+  font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
 }

@@ -18,7 +18,7 @@ const projectsData = {
     projects: [
       {
         title: "AI Content Creator tool",
-        description: "Turn a story into an illustrated comic",
+        description: "A creative assistant that generates scripts, captions, social media ideas, or content plans.",
         image:
           "/images/projects-to-build/ai-study-buddy.png",
       },
@@ -30,7 +30,7 @@ const projectsData = {
       },
       {
         title: "AI Research Assistant",
-        description: "Write lyrics and compose your own music",
+        description: "A tool that finds, summarizes, and structures information into usable formats.",
         image:
           "/images/projects-to-build/ai-research-assistant.png",
         playable: true,
@@ -84,10 +84,10 @@ const projectsData = {
     tools: ["Lovable", "Canva", "Figma", "ChatGPT"],
     projects: [
       {
-        title: "Personal Website",
+        title: "No-Code Ideas in Action",
         description: "Create your own website with AI",
         image:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/no-code-ideas-in-action.png",
       },
       {
         title: "App Prototype",
@@ -117,10 +117,10 @@ const projectsData = {
     tools: ["ChatGPT", "Canva", "HeyGen", "Google Slides"],
     projects: [
       {
-        title: "Storytelling Video",
+        title: "Bright Communication Learning Scene",
         description: "Turn your ideas into short videos",
         image:
-          "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/bright-communication-learning-scene.png",
       },
       {
         title: "Creative Presentation",

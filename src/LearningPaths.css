@@ -246,7 +246,7 @@
 .learning-table__button--foundation,
 .learning-table__button--mastery {
   background: #edddff;
-  color: #310078;
+  color: #004f9e;
 }
 
 .learning-table__button--foundation:hover,
@@ -255,7 +255,7 @@
 }
 
 .learning-table__button--accelerator {
-  background: #310078;
+  background:#004f9e ;
   color: #ffffff;
 }
 
