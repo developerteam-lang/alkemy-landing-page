@@ -3,10 +3,10 @@ import "./LiveClasses.css";
 
 const weeks = [
   { label: "WEEK 1", subtitle: "GETTING STARTED" },
-  { label: "WEEK 2", subtitle: "AI CREATIVE STUDIO" },
-  { label: "WEEK 3", subtitle: "AI INNOVATION LAB" },
-  { label: "WEEK 4", subtitle: "BE FUTURE-READY" },
-  { label: "WEEK 5", subtitle: "AI SHOWCASE" },
+  { label: "WEEK 1", subtitle: "AI CREATIVE STUDIO" },
+  { label: "WEEK 1 and  Week 2", subtitle: "AI INNOVATION LAB" },
+  { label: "WEEK 2", subtitle: "BE FUTURE-READY" },
+  { label: "WEEK 2", subtitle: "AI SHOWCASE" },
 ];
 
 const weekContent = [
@@ -17,7 +17,7 @@ const weekContent = [
       {
         title: "Foundations and Problem Hunt",
         description:
-          "Learn to give AI the right instructions and build a personal tutor that explains difficult concepts and answers questions.",
+          "What AI is, product thinking, finding problems worth solving",
         day: "Saturday",
         tools: ["Gemini", "Claude"],
         image: "/images/live-classes/robot-exploring-ideas.png",
@@ -26,7 +26,7 @@ const weekContent = [
       {
         title: "Prompt Engineering and AI Trust Check",
         description:
-          "Turn complex topics and school chapters into easy notes, mind maps, flashcards and practice quizzes.",
+          "Prompt structure, multi-step prompting, the 3-step responsible-use framework",
         day: "Sunday",
         tools: ["Gemini", "NotebookLM"],
         image: "/images/live-classes/friendly-robot-ai-trust-check.png",
@@ -35,14 +35,14 @@ const weekContent = [
     ],
   },
 
-  // WEEK 2 — DIFFERENT CONTENT
+  // WEEK 1 — DIFFERENT CONTENT
   {
     heading: "Robot Researcher With Laptop and Lightbulb",
     sessions: [
       {
         title: "Research And Validation",
         description:
-          "Turn your child's ideas into exciting stories, creative characters and imaginative adventures using AI tools.",
+          "Researching a problem space, validating the idea against evidence",
         day: "Saturday",
         tools: ["ChatGPT", "Gemini"],
         image: "/images/live-classes/robot-researcher-with-laptop-and-lightbulb.png",
@@ -51,7 +51,7 @@ const weekContent = [
       {
         title: "UX User Flows And Prototyping",
         description:
-          "Explore AI-powered design to create colourful posters, digital artwork and presentations from simple ideas.",
+          "How a user moves through the product, building the first interactive version.",
         day: "Sunday",
         tools: ["Canva AI", "Gemini"],
         image: "/images/live-classes/ux-userflows-and-prototyping.png",
@@ -60,23 +60,23 @@ const weekContent = [
     ],
   },
 
-  // WEEK 3 — DUMMY CONTENT, EDIT LATER
+  // WEEK 1 and Week 2 — DUMMY CONTENT, EDIT LATER
   {
     heading: "Explore Ideas And Build With AI",
     sessions: [
       {
         title: "Feature Mapping and Blueprint",
         description:
-          "Explore everyday challenges and learn how AI can help generate ideas, compare solutions and think creatively.",
+          "Prioritising features, mapping prompts to each, locking the build plan",
         day: "Saturday",
         tools: ["ChatGPT", "Claude"],
         image: "/images/live-classes/future-mapping-and-blueprint.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
-        title: "Build Your First AI-Powered Project",
+        title: "Core Feature Build",
         description:
-          "Turn a simple idea into a mini project and learn how to plan, improve and present your creation.",
+          "Getting the primary AI-powered feature working end to end",
         day: "Sunday",
         tools: ["Gemini", "Canva AI"],
         image: "/images/live-classes/smart-study-kits.png",
@@ -90,18 +90,18 @@ const weekContent = [
     heading: "Get Ready For The Future With AI",
     sessions: [
       {
-        title: "Learn Smart Research Skills",
+        title: "Testing and Iteration",
         description:
-          "Learn to ask better questions, explore reliable information and organise research with the help of AI.",
+          "Breaking the product deliberately, fixing edge cases, refining prompts",
         day: "Saturday",
         tools: ["Gemini", "NotebookLM"],
         image: "/images/live-classes/ai-tutor.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
-        title: "Present Your Ideas With Confidence",
+        title: "Polish and Publish",
         description:
-          "Use AI to organise your thoughts and create clear, engaging presentations for school projects.",
+          "Visual craft, product copy, deployment",
         day: "Sunday",
         tools: ["Canva AI", "ChatGPT"],
         image: "/images/live-classes/smart-study-kits.png",
@@ -115,18 +115,18 @@ const weekContent = [
     heading: "Showcase Your AI Skills",
     sessions: [
       {
-        title: "Prepare Your Final AI Creation",
+        title: "Peer Testing and Demo Storytelling",
         description:
-          "Bring together the skills you've learned to polish your project and prepare it for the final showcase.",
+          "Testing each other's live products, structuring the demo narrative",
         day: "Saturday",
         tools: ["Gemini", "Canva AI"],
         image: "/images/live-classes/ai-tutor.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
-        title: "Present Your Project To The World",
+        title: "Rehearsal and Tech Check",
         description:
-          "Share your creation, explain how you built it and celebrate your progress as a confident AI learner.",
+          "Timed run-throughs, feedback, final fixes",
         day: "Sunday",
         tools: ["ChatGPT", "NotebookLM"],
         image: "/images/live-classes/smart-study-kits.png",

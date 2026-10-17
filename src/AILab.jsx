@@ -8,7 +8,7 @@ const resources = [
   {
     id: 1,
     icon: "🤖",
-    title: "AI Prompt & Command Bank",
+    title: "Product-first, not tool-first",
     meta: ["15 Resources", "2 Assignments"],
     items: [
       "Prompt Bank",
@@ -21,7 +21,7 @@ const resources = [
   {
     id: 2,
     icon: "🎨",
-    title: "Pre-Read Resource Library",
+    title: "No coding required",
     meta: ["10 Skill-based PDFs", "Included"],
     items: [
       "Beginner-friendly reading materials",
@@ -32,7 +32,7 @@ const resources = [
   {
     id: 3,
     icon: "💡",
-    title: "GenAI Tools Ready Reckoner",
+    title: "College portfolio outcome",
     meta: ["20 AI Tools", "Use Cases", "Features", "Free vs Paid"],
     items: [
       "AI writing and research tools",
@@ -44,7 +44,7 @@ const resources = [
   {
     id: 4,
     icon: "📈",
-    title: "Daily Practice Assignments",
+    title: "Structured build process",
     meta: ["10 Assignments", "Practice after live sessions"],
     items: [
       "Daily hands-on activities",
@@ -55,7 +55,7 @@ const resources = [
   {
     id: 5,
     icon: "🎥",
-    title: "Bonus – Academic Skills Videos",
+    title: "Verify the Facts",
     meta: ["Video track"],
     items: [
       "Academic skills video lessons",
@@ -66,7 +66,7 @@ const resources = [
   {
     id: 6,
     icon: "📚",
-    title: "eBooks – AI Study Workbooks",
+    title: "Question the Logic",
     meta: ["3 Workbooks", "Included with enrolment"],
     items: [
       "AI study workbook",
@@ -77,7 +77,7 @@ const resources = [
   {
     id: 7,
     icon: "🗓️",
-    title: "12-Month Exclusive Access",
+    title: "Add Their Judgment",
     meta: ["12-Month Exclusive Access to the AI Lab", "Included"],
     items: [
       "Access learning resources throughout the year",
