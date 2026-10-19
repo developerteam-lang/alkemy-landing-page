@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import "./MentorsSection.css";
 
@@ -8,7 +7,7 @@ const mentors = [
     name: "Praveen Kumar",
     role: "AI Trainer",
     organization: "The Cutting Edge School",
-    image: "/images/trainers/praveen-ai-trainer.png",
+    image: "/images/trainers/praveen-ai-trainer.jpg",
     bio: "Founder and mentor helping students explore AI through practical, project-led learning.",
   }
   // ,{

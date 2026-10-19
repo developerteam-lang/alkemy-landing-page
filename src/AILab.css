@@ -1,3 +1,4 @@
+
 .ai-lab {
   width: 100%;
   padding: 3px 20px 12px;
@@ -13,7 +14,7 @@
   box-sizing: border-box;
 }
 
-/* Header */
+/* Header - keep existing styling */
 
 .ai-lab__header {
   max-width: 620px;
@@ -24,7 +25,7 @@
 .ai-lab__eyebrow {
   margin: 28px 0 6px;
   color: #170c20;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.3;
   font-weight: 700;
   letter-spacing: 1px;
@@ -48,22 +49,24 @@
   font-weight: 400;
 }
 
-/* Main two-column layout */
+/* DESKTOP: Expand the layout across the available screen.
+   Only 5px left and right spacing for the AI Lab section. */
 
 .ai-lab__layout {
   display: grid;
-  grid-template-columns: minmax(0, 340px) minmax(0, 239px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
   align-items: start;
-  justify-content: center;
+  justify-content: stretch;
   gap: 20px;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 /* Left accordion */
 
 .ai-lab__accordion {
+  width: 100%;
   min-width: 0;
   overflow: hidden;
   border: 1px solid #dfd3ed;
@@ -86,7 +89,7 @@
   gap: 9px;
   width: 100%;
   min-height: 51px;
-  padding: 10px 10px;
+  padding: 10px;
   border: none;
   background: transparent;
   color: inherit;
@@ -127,7 +130,7 @@
 
 .ai-lab__resource-title {
   color: #160b27;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.3;
   font-weight: 700;
 }
@@ -138,7 +141,7 @@
   align-items: center;
   gap: 3px 7px;
   color: #716a7b;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.3;
 }
 
@@ -182,7 +185,7 @@
   margin: 3px 0 0;
   padding-left: 9px;
   color: #21152a;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -193,7 +196,7 @@
 .ai-lab__resource-note {
   margin: 10px 0 0;
   color: #004f9e;
-  font-size: 7px;
+  font-size: 12px;
   line-height: 1.5;
   font-style: italic;
 }
@@ -201,14 +204,15 @@
 /* Right video card */
 
 .ai-lab__video-card {
+  width: 100%;
   min-width: 0;
+  max-width: 400px;
   padding: 8px;
   overflow: hidden;
   border: 1px solid #004f9e;
   border-radius: 8px;
   background: #004f9e;
   color: #fff;
-  width:400px;
 }
 
 .ai-lab__video-frame {
@@ -221,10 +225,12 @@
 }
 
 .ai-lab__video {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  border:0;
+  border: 0;
 }
 
 .ai-lab__video-content {
@@ -248,13 +254,33 @@
   font-weight: 400;
 }
 
-/* Responsive layout */
+/* DESKTOP ONLY: 761px and above */
 
-@media (min-width: 1000px) {
+@media (min-width: 761px) {
+  .ai-lab {
+    padding-left: 60px;
+    padding-right: 100px;
+  }
+
   .ai-lab__layout {
-    grid-template-columns: minmax(0, 340px) minmax(0, 239px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+    gap: 20px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .ai-lab__accordion {
+    width: 100%;
+  }
+
+  .ai-lab__video-card {
+    width: 100%;
+    max-width: 400px;
   }
 }
+
+/* MOBILE: Original mobile styling preserved */
 
 @media (max-width: 600px) {
   .ai-lab {
@@ -277,10 +303,12 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
     max-width: 420px;
+    margin: 0 auto;
   }
 
   .ai-lab__video-card {
     width: 100%;
+    max-width: none;
   }
 
   .ai-lab__video-title {
