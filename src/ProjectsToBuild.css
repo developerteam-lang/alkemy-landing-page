@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
 .projects-build {
   width: 100%;
-  padding: 30px 20px 32px;
+  padding: 30px 220px 32px 220px;
   background: #fffaf5;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -21,7 +23,7 @@
 
 .projects-build__eyebrow {
   margin: 0 0 7px;
-  font-size: 8px;
+  font-size: 13px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: 1px;
@@ -45,9 +47,10 @@
   color: #756a79;
 }
 
+/* Desktop: use the full available screen width */
 .projects-build__container {
   width: 100%;
-  max-width: 600px;
+  max-width: none;
   margin: 0 auto;
 }
 
@@ -73,15 +76,11 @@
   background: #f2eafb;
   color: #160b27;
   font-family: inherit;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
   cursor: pointer;
-  transition:
-    background 180ms ease,
-    color 180ms ease;
+  transition: background 180ms ease, color 180ms ease;
 }
-
-
 
 .projects-build__tab:hover {
   background: #e6d7f8;
@@ -117,7 +116,7 @@
 .projects-build__description {
   margin: 0;
   color: #004f9e;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.55;
   font-weight: 400;
 }
@@ -148,7 +147,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
   transition: transform 220ms ease;
 }
 
@@ -210,7 +209,7 @@
 
 .projects-build__tools-label {
   color: #21152b;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.8px;
 }
@@ -226,7 +225,7 @@
   padding: 0 10px;
   border-right: 1px solid #ddd3e8;
   color: #332640;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -239,10 +238,15 @@
   border-right: none;
 }
 
-/* Tablet and mobile responsiveness */
+/* Tablet and mobile: preserve the existing responsive layout */
 @media (max-width: 600px) {
   .projects-build {
     padding: 26px 14px;
+  }
+
+  .projects-build__container {
+    width: 100%;
+    max-width: 100%;
   }
 
   .projects-build__title {

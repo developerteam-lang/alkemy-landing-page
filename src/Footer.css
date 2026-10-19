@@ -54,6 +54,7 @@
   max-width: 100px;
   object-fit: contain;
   flex-shrink: 0;
+  border-radius: 20px;
 }
 
 .toi-footer__logo-text {
