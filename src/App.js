@@ -32,8 +32,8 @@ function App() {
       </div>
       <LiveToolOrbit />
       <MentorSection />
-      <LearningPaths />
       <LiveClassSchedule />
+      <LearningPaths />
       <WinnersSection />
       <WinterCampFAQ />
       <Footer />
