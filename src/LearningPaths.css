@@ -83,7 +83,7 @@
   margin: 0 0 4px;
   padding: 2px 5px;
   border-radius: 10px;
-  background: #310078;
+  background: #004f9e;
   color: #ffffff;
   font-size: 9px;
   line-height: 1.1;
@@ -219,6 +219,7 @@
 }
 
 .learning-table__enroll--featured {
+  /* #f6efff hsl(266, 100%, 97%)*/
   background: #f6efff;
 }
 

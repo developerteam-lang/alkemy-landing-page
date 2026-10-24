@@ -1,41 +1,75 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./ProgramInTwoMinutes.css";
 
 const ProgramInTwoMinutes = ({
-  youtubeUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  // https://drive.google.com/file/d/1LqzbEn4PSz9Y9WMg-RVyQQwqMJrFO7RX/preview?autoplay=1&mute=1
+  videoUrl = "https://drive.google.com/file/d/1LqzbEn4PSz9Y9WMg-RVyQQwqMJrFO7RX/view?usp=sharing",
+  youtubeUrl,
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
 
-  // Extract the YouTube video ID from different YouTube URL formats.
-  const getYouTubeVideoId = (url) => {
+  // Supports both the existing youtubeUrl prop and the new videoUrl prop.
+  const currentVideoUrl = youtubeUrl || videoUrl;
+
+  // Identify the video provider and generate its embed URL.
+  const getVideoEmbedUrl = (url) => {
     try {
       const parsedUrl = new URL(url);
 
-      if (parsedUrl.hostname.includes("youtu.be")) {
-        return parsedUrl.pathname.slice(1).split("/")[0];
+      // Google Drive video
+      if (
+        parsedUrl.hostname === "drive.google.com" ||
+        parsedUrl.hostname === "www.drive.google.com"
+      ) {
+        const match = parsedUrl.pathname.match(/\/file\/d\/([^/]+)/);
+
+        if (!match) return "";
+
+        const driveVideoId = match[1];
+
+        return `https://drive.google.com/file/d/${driveVideoId}/preview`;
       }
 
-      if (parsedUrl.pathname.startsWith("/shorts/")) {
-        return parsedUrl.pathname.split("/")[2];
+      // YouTube video
+      let videoId = "";
+
+      if (
+        parsedUrl.hostname === "youtu.be" ||
+        parsedUrl.hostname === "www.youtu.be"
+      ) {
+        videoId = parsedUrl.pathname.slice(1).split("/")[0];
+      } else if (
+        parsedUrl.hostname === "youtube.com" ||
+        parsedUrl.hostname === "www.youtube.com" ||
+        parsedUrl.hostname === "m.youtube.com"
+      ) {
+        if (
+          parsedUrl.pathname.startsWith("/shorts/") ||
+          parsedUrl.pathname.startsWith("/embed/")
+        ) {
+          videoId = parsedUrl.pathname.split("/")[2] || "";
+        } else {
+          videoId = parsedUrl.searchParams.get("v") || "";
+        }
       }
 
-      if (parsedUrl.pathname.startsWith("/embed/")) {
-        return parsedUrl.pathname.split("/")[2];
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
       }
 
-      return parsedUrl.searchParams.get("v");
+      return "";
     } catch {
       return "";
     }
   };
 
-  const videoId = getYouTubeVideoId(youtubeUrl);
+  const embedUrl = getVideoEmbedUrl(currentVideoUrl);
 
-  if (!videoId) {
+  if (!embedUrl) {
     return null;
   }
 
-  const thumbnail = "../images/thumbnail_image.png";
+  // const thumbnail = "../images/thumbnail_image.png";
 
   return (
     <section className="program-preview">
@@ -67,28 +101,30 @@ const ProgramInTwoMinutes = ({
 
       <div className="program-preview__video-wrapper">
         <div className="program-preview__video">
-          {isPlaying ? (
+          {/* {isPlaying ? ( */}
             <iframe
+              key={embedUrl}
               className="program-preview__iframe"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+              src={embedUrl}
               title="See the program in 2 minutes"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
               allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
             />
-          ) : (
+          {/* ) : (
             <button
               type="button"
               className="program-preview__thumbnail"
               onClick={() => setIsPlaying(true)}
               aria-label="Play program introduction video"
-            >
-              <img
-                src={thumbnail}
+            > */}
+              {/* <img
+                src={thumb}
                 alt="Program introduction video thumbnail"
                 className="program-preview__image"
-              />
+              /> */}
 
-              <span className="program-preview__play-button">
+              {/* <span className="program-preview__play-button">
                 <svg
                   viewBox="0 0 24 24"
                   width="25"
@@ -102,7 +138,7 @@ const ProgramInTwoMinutes = ({
                 </svg>
               </span>
             </button>
-          )}
+          )} */}
         </div>
       </div>
     </section>

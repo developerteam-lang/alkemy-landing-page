@@ -1,6 +1,7 @@
 import './App.css';
 import Header from "./Header";
-import AIWinterCampHero from './AIWinterCampHero';
+import Hero from "./Hero";
+// import AIWinterCampHero from './AIWinterCampHero';
 import ProgramInTwoMinutes from './ProgramInTwoMinutes';
 import AIProgramHighlights from './AIProgramHighlights';
 import WinterCampFAQ from './WinterCampFAQ';
@@ -18,11 +19,12 @@ function App() {
   return (
     <div>
       {/* Header Component */}
-      <Header />
-      <AIWinterCampHero />
+       <Header />
+       <Hero />
+       {/* <AIWinterCampHero />*/}
       <AIProgramHighlights />
       <div className="topImage">
-          <ProgramInTwoMinutes youtubeUrl="https://www.youtube.com/watch?v=jfKfPfyJRdk" />
+          <ProgramInTwoMinutes  videoUrl="https://drive.google.com/file/d/1LqzbEn4PSz9Y9WMg-RVyQQwqMJrFO7RX/view?usp=sharing" />
       </div>
       <TrustedSchools />
       <ProjectsToBuild />
@@ -36,7 +38,7 @@ function App() {
       <LearningPaths />
       <WinnersSection />
       <WinterCampFAQ />
-      <Footer />
+      <Footer /> 
     </div>
   );
 }
