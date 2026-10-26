@@ -8,7 +8,7 @@ const mentors = [
     role: "AI Trainer",
     organization: "The Cutting Edge School",
     image: "/images/trainers/praveen-ai-trainer.jpg",
-    bio: "Founder and mentor helping students explore AI through practical, project-led learning.",
+    bio: "Mentor helping students explore AI through practical, project-led learning.",
   }
   // ,{
   //   id: 2,

@@ -117,7 +117,7 @@ const Hero = () => {
           gap: 40px;
           width: 100%;
           max-width: 1240px;
-          margin: 0 auto;
+          margin: 23px auto;
         }
 
         .winter-hero-content {
@@ -131,10 +131,10 @@ const Hero = () => {
           gap: 7px;
           padding: 7px 13px;
           margin-bottom: 18px;
-          border: 1px solid #d9c5ff;
+          border: 1px solid #01357f;
           border-radius: 30px;
           background: #f5edff;
-          color: #5723a1;
+          color: #01357f;
           font-size: 12px;
           font-weight: 700;
           letter-spacing: 0.5px;
@@ -144,7 +144,7 @@ const Hero = () => {
           width: 7px;
           height: 7px;
           border-radius: 50%;
-          background: #7c36ce;
+          background: #01357f;
         }
 
         .winter-hero-title {
@@ -306,7 +306,7 @@ const Hero = () => {
           overflow: hidden;
           border: 1px solid rgba(255, 255, 255, 0.4);
           border-radius: 22px;
-          background: linear-gradient(155deg, #60349a, #321061 78%);
+          background: #01357f;
           box-shadow: 0 22px 45px rgba(50, 16, 97, 0.24);
           animation: winterCardEnter 0.7s ease both;
         }
@@ -398,7 +398,7 @@ const Hero = () => {
           gap: 8px;
           padding: 9px 11px;
           color: #786b8b;
-          font-size: 11px;
+          font-size: 13px;
           font-weight: 600;
           transition: all 0.35s ease;
         }
@@ -671,10 +671,11 @@ const Hero = () => {
         <div className="winter-hero-inner">
           {/* LEFT CONTENT */}
           <div className="winter-hero-content" key="hero-content">
+            {/* */}
             <div className="winter-hero-eyebrow">
               <span />
               AI WINTER CAMP FOR STUDENTS
-            </div>
+            </div> 
 
             <h1 className="winter-hero-title">
               Build Skills.
