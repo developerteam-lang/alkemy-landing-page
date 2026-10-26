@@ -9,6 +9,7 @@ const weeks = [
   // { label: "WEEK 2", subtitle: "AI SHOWCASE" },
 ];
 
+
 const weekContent = [
   // WEEK 1
   {
