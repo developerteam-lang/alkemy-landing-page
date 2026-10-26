@@ -3,10 +3,10 @@ import "./LiveClasses.css";
 
 const weeks = [
   { label: "WEEK 1", subtitle: "GETTING STARTED" },
-  { label: "WEEK 1", subtitle: "AI CREATIVE STUDIO" },
-  { label: "WEEK 1 and  Week 2", subtitle: "AI INNOVATION LAB" },
-  { label: "WEEK 2", subtitle: "BE FUTURE-READY" },
-  { label: "WEEK 2", subtitle: "AI SHOWCASE" },
+  { label: "WEEK 2", subtitle: "AI CREATIVE STUDIO" },
+  // { label: "WEEK 1 and  Week 2", subtitle: "AI INNOVATION LAB" },
+  // { label: "WEEK 2", subtitle: "BE FUTURE-READY" },
+  // { label: "WEEK 2", subtitle: "AI SHOWCASE" },
 ];
 
 const weekContent = [
@@ -32,13 +32,6 @@ const weekContent = [
         image: "/images/live-classes/friendly-robot-ai-trust-check.png",
         imageAlt: "Illustration of educational study materials",
       },
-    ],
-  },
-
-  // WEEK 1 — DIFFERENT CONTENT
-  {
-    heading: "Robot Researcher With Laptop and Lightbulb",
-    sessions: [
       {
         title: "Research And Validation",
         description:
@@ -57,11 +50,72 @@ const weekContent = [
         image: "/images/live-classes/ux-userflows-and-prototyping.png",
         imageAlt: "Illustration of educational study materials",
       },
+      {
+        title: "Feature Mapping and Blueprint",
+        description:
+          "Prioritising features, mapping prompts to each, locking the build plan",
+        day: "Saturday",
+        tools: ["ChatGPT", "Claude"],
+        image: "/images/live-classes/future-mapping-and-blueprint.png",
+        imageAlt: "AI tutor robot using a laptop",
+      },
+    ],
+  },
+
+  // WEEK 1 — DIFFERENT CONTENT
+  {
+    heading: "Robot Researcher With Laptop and Lightbulb",
+    sessions: [
+        {
+        title: "Core Feature Build",
+        description:
+          "Getting the primary AI-powered feature working end to end",
+        day: "Sunday",
+        tools: ["Gemini", "Canva AI"],
+        image: "/images/live-classes/smart-study-kits.png",
+        imageAlt: "Illustration of educational study materials",
+      },
+      {
+        title: "Testing and Iteration",
+        description:
+          "Breaking the product deliberately, fixing edge cases, refining prompts",
+        day: "Saturday",
+        tools: ["Gemini", "NotebookLM"],
+        image: "/images/live-classes/ai-tutor.png",
+        imageAlt: "AI tutor robot using a laptop",
+      },
+      {
+        title: "Polish and Publish",
+        description:
+          "Visual craft, product copy, deployment",
+        day: "Sunday",
+        tools: ["Canva AI", "ChatGPT"],
+        image: "/images/live-classes/smart-study-kits.png",
+        imageAlt: "Illustration of educational study materials",
+      },
+      {
+        title: "Peer Testing and Demo Storytelling",
+        description:
+          "Testing each other's live products, structuring the demo narrative",
+        day: "Saturday",
+        tools: ["Gemini", "Canva AI"],
+        image: "/images/live-classes/ai-tutor.png",
+        imageAlt: "AI tutor robot using a laptop",
+      },
+      {
+        title: "Rehearsal and Tech Check",
+        description:
+          "Timed run-throughs, feedback, final fixes",
+        day: "Sunday",
+        tools: ["ChatGPT", "NotebookLM"],
+        image: "/images/live-classes/smart-study-kits.png",
+        imageAlt: "Illustration of educational study materials",
+      },
     ],
   },
 
   // WEEK 1 and Week 2 — DUMMY CONTENT, EDIT LATER
-  {
+  {/*{
     heading: "Explore Ideas And Build With AI",
     sessions: [
       {
@@ -83,10 +137,11 @@ const weekContent = [
         imageAlt: "Illustration of educational study materials",
       },
     ],
-  },
+  }
+  */}
 
   // WEEK 4 — DUMMY CONTENT, EDIT LATER
-  {
+  ,{
     heading: "Get Ready For The Future With AI",
     sessions: [
       {
@@ -107,6 +162,7 @@ const weekContent = [
         image: "/images/live-classes/smart-study-kits.png",
         imageAlt: "Illustration of educational study materials",
       },
+      
     ],
   },
 
@@ -208,7 +264,7 @@ export default function LiveClasses() {
       </header>
 
       <div className="live-classes__panel">
-        <div
+        <div        
           className="live-classes__tabs"
           role="tablist"
           aria-label="Learning weeks"
