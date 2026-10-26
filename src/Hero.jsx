@@ -719,7 +719,7 @@ const Hero = () => {
               </li>
             </ul>
 
-            <a className="winter-hero-cta" href="#enroll">
+            <a className="winter-hero-cta" href="https://www.alkemyedtech.com/enroll">
               Enroll Your Child <span aria-hidden="true">→</span>
             </a>
           </div>

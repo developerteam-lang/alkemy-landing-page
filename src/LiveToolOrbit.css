@@ -8,7 +8,7 @@
 }
 
 .tool-orbit-stage {
-  width: 100%;
+width: 100%;
   max-width: 1193px;
   height: 464px;
   margin: 0 auto;
@@ -76,7 +76,7 @@
 .tool-orbit-center h1 {
   margin: 0 0 13px;
   color: #39008e;
-  font-size: clamp(25px, 3vw, 34px);
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -1.1px;
@@ -222,7 +222,18 @@
     max-width: 320px;
     margin: 0 auto;
   }
+  
+  /*
+  @media (min-width: 701px) {
+  .tool-orbit-item[style*="23.9%"] {
+    top: 27.5% !important;
+  }
 
+  .tool-orbit-item[style*="21.7%"] {
+    top: 64.5% !important;
+  }
+}
+*/
   /* Remove desktop absolute coordinates on mobile. */
   .tool-orbit-item {
     position: relative;

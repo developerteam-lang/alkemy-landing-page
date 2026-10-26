@@ -2,7 +2,7 @@ import React from "react";
 import "./LiveToolOrbit.css";
 
 const tools = [
-  { name: "Canva", image: "/images/ai-tool-icons/Canva.png", x: 23.9, y: 25.4 },
+  { name: "Canva", image: "/images/ai-tool-icons/Canva.png", x: 24.4, y: 28.4 },
   { name: "Notion", image: "/images/ai-tool-icons/Notion.png", x: 31.0, y: 17.5 },
   { name: "Loom", image: "/images/ai-tool-icons/Loom.png", x: 39.0, y: 12.1 },
   { name: "Google AI Studio", image: "/images/ai-tool-icons/google-ai-studio.png", x: 46.7, y: 10.1 },
@@ -12,11 +12,11 @@ const tools = [
   { name: "Claude Anthropic", image: "/images/ai-tool-icons/claude-anthropic.png", x: 73.5, y: 74.5 },
   { name: "Gemini", image: "/images/ai-tool-icons/Gemini.png", x: 80.2, y: 41.0 },
   { name: "NotebookLM", image: "/images/ai-tool-icons/NotebookLM.png", x: 79.2, y: 62.7 },
-  { name: "Lovable", image: "/images/ai-tool-icons/Lovable.png", x: 21.7, y: 67.8 },
-  { name: "Suno", image: "/images/ai-tool-icons/Suno.png", x: 30.4, y: 80.5 },
-  { name: "Eleven Labs", image: "/images/ai-tool-icons/ElevenLabs.png", x: 38.9, y: 86.2 },
-  { name: "HeyGen", image: "/images/ai-tool-icons/HeyGen.png", x: 48.0, y: 88.0 },
-  { name: "Higgsfield", image: "/images/ai-tool-icons/Higgsfield.png", x: 57.9, y: 86.7 },
+  { name: "Lovable", image: "/images/ai-tool-icons/Lovable.png", x: 22.7, y: 52.5 },
+  { name: "Suno", image: "/images/ai-tool-icons/Suno.png", x: 28.4, y: 70.5 },
+  { name: "Eleven Labs", image: "/images/ai-tool-icons/ElevenLabs.png", x: 37.9, y: 80.2 },
+  { name: "HeyGen", image: "/images/ai-tool-icons/HeyGen.png", x: 48.0, y: 86.0 },
+  { name: "Higgsfield", image: "/images/ai-tool-icons/Higgsfield.png", x: 55.9, y: 84.7 },
   { name: "Google Flow", image: "/images/ai-tool-icons/GoogleFlow.png", x: 65.4, y: 83.0 },
 ];
 

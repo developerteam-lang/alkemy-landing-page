@@ -54,7 +54,7 @@ const batches = {
 function WinnerCard({ winner }) {
   return (
     <article className="winner-card">
-      <div className="winner-card__badge">{winner.label}</div>
+      {/* <div className="winner-card__badge">{winner.label}</div> */}
 
       <a
         className="winner-card__video"
@@ -79,7 +79,7 @@ function WinnerCard({ winner }) {
 
       <div className="winner-card__details">
         <h3>{winner.name}</h3>
-        <p>{winner.className}</p>
+        {/* <p>{winner.className}</p> */}
       </div>
     </article>
   );

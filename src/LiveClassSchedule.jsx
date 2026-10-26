@@ -2,11 +2,11 @@ import React from "react";
 import "./LiveClassSchedule.css";
 
 const weeks = [
-  { week: "WEEK 1", dates: "26–27 Dec" },
-  { week: "WEEK 2", dates: "2–3 Jan" },
-  { week: "WEEK 3", dates: "9–10 Jan" },
-  { week: "WEEK 4", dates: "16–17 Jan" },
-  { week: "WEEK 5", dates: "23–24 Jan" },
+  { week: "WEEK 1", dates: "" },
+  { week: "WEEK 2", dates: "" },
+  { week: "WEEK 3", dates: "" },
+  { week: "WEEK 4", dates: "" },
+  { week: "WEEK 5", dates: "" },
 ];
 
 function LiveClassSchedule() {
