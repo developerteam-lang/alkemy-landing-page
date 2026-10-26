@@ -7,6 +7,8 @@ const Hero = () => {
     "/images/hero/creative-skills.png",
     "/images/hero/academic-skills.png",
     "/images/hero/no-code-skills.png",
+    "/images/hero/communication-skills.png",
+    "/images/hero/career-discovery.png"
   ];
 
   const skills = [
@@ -24,11 +26,11 @@ const Hero = () => {
     },
     {
       title: "Communication Skills",
-      image: images[0],
+      image: images[3],
     },
     {
       title: "Career Discovery",
-      image: images[1],
+      image: images[4],
     },
   ];
 
