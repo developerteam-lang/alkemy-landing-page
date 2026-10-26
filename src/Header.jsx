@@ -13,7 +13,7 @@ function Header({
           {logoSrc ? (
             <>
             <img src={logoSrc} alt={logoAlt} />
-            <h1 >Alkemy <span>Edtech</span></h1>
+            <h1 >Alkemy Edtech</h1>
             </>
           ) : (
             <span className="site-header__logo-placeholder">Your logo</span>

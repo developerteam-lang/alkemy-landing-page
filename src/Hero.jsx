@@ -52,7 +52,7 @@ const Hero = () => {
           width: 100%;
           overflow: hidden;
           box-sizing: border-box;
-          padding: 48px 6%;
+          padding: 48px 7%;
           background:
             radial-gradient(
               circle at 90% 20%,
@@ -114,7 +114,7 @@ const Hero = () => {
           display: grid;
           grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
           align-items: center;
-          gap: 48px;
+          gap: 40px;
           width: 100%;
           max-width: 1240px;
           margin: 0 auto;
@@ -150,7 +150,7 @@ const Hero = () => {
         .winter-hero-title {
           max-width: 570px;
           margin: 0;
-          color: #28105f;
+          color: black;
           font-size: clamp(36px, 4.2vw, 62px);
           font-weight: 800;
           line-height: 1.06;
@@ -158,7 +158,7 @@ const Hero = () => {
         }
 
         .winter-hero-title em {
-          color: #7434bb;
+          color: #01357f;
           font-style: normal;
         }
 
@@ -233,7 +233,7 @@ const Hero = () => {
           padding: 0 25px;
           border: 0;
           border-radius: 30px;
-          background: #31076f;
+          background: #01357f;
           box-shadow: 0 7px 18px rgba(49, 7, 111, 0.17);
           color: #fff;
           font-size: 14px;
@@ -254,8 +254,8 @@ const Hero = () => {
           display: flex;
           min-width: 0;
           min-height: 420px;
-          align-items: center;
-          justify-content: center;
+          align-items: left;
+          justify-content: left;
           perspective: 1000px;
         }
 
@@ -664,6 +664,7 @@ const Hero = () => {
             transition-duration: 0.01ms !important;
           }
         }
+
       `}</style>
 
       <section className="winter-hero">
@@ -751,7 +752,6 @@ const Hero = () => {
                     className="winter-hero-image-placeholder"
                     style={{ display: "none" }}
                   >
-                    <span>✦</span>
                     <strong>{activeSkill.title}</strong>
                   </div>
                 </div>

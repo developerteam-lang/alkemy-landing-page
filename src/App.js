@@ -17,11 +17,13 @@ import MentorSection from './MentorSection';
 import Footer from './Footer';
 function App() {
   return (
-    <div>
+    <>
       {/* Header Component */}
-       <Header />
+        {/* <div style={{position:"fixed",top:"0px"}}></div> */}
+          <Header />
+        
        <Hero />
-       {/* <AIWinterCampHero />*/}
+       {/* <AIWinterCampHero /> */}
       <AIProgramHighlights />
       <div className="topImage">
           <ProgramInTwoMinutes  videoUrl="https://drive.google.com/file/d/1LqzbEn4PSz9Y9WMg-RVyQQwqMJrFO7RX/view?usp=sharing" />
@@ -29,7 +31,7 @@ function App() {
       <TrustedSchools />
       <ProjectsToBuild />
       <LiveClasses />
-      <div className="topImage">
+    <div className="topImage">
          <AILab />
       </div>
       <LiveToolOrbit />
@@ -39,7 +41,7 @@ function App() {
       <WinnersSection />
       <WinterCampFAQ />
       <Footer /> 
-    </div>
+    </>
   );
 }
 

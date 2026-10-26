@@ -2,7 +2,8 @@
 .toi-footer {
   width: 100%;
   min-height: 128px;
-  background-color: #004f9e;
+  /* #004f9e */
+  background-color:#01357f ; 
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
