@@ -32,7 +32,7 @@ const batches = {
       name: "Drishti",
       className: "Class 7",
       label: "WINNER - CLASS 7",
-      videoUrl: "https://www.youtube.com/watch?v=zm11KNay_vU",
+      videoUrl: "https://www.youtube.com/watch?v=qImbQva5osU",
       thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg",
     },
     {
