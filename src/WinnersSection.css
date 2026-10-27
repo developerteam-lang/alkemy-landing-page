@@ -105,10 +105,11 @@
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9; 
   overflow: hidden;
   background: #111827;
   text-decoration: none;
+  /* border-radius:0; */
 }
 
 .winner-card__thumbnail {
@@ -320,4 +321,84 @@
     height: 38px;
     flex-basis: 38px;
   }
+}
+
+
+
+/* Keep the existing video dimensions and design */
+.winner-card__video {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111827;
+  /* text-decoration: none; */
+  border-radius: 0;
+}
+
+/* Thumbnail and play button */
+.winner-card__video-trigger {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  margin:0;
+}
+
+/* Embedded video player */
+.winner-card__player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Preserve the existing hover animation */
+.winner-card__video-trigger:hover .winner-card__thumbnail {
+  transform: scale(1.035);
+}
+
+.winner-card__video-trigger:hover .winner-card__play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.winner-card__video-trigger:focus-visible {
+  outline: 3px solid #7b45d6;
+  outline-offset: -3px;
+}
+
+
+.winner-card__video-trigger {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.winner-card__video-trigger .winner-card__thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
