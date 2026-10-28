@@ -293,7 +293,7 @@ const Hero = () => {
           inset: 8px 15px 0;
           border: 1px solid rgba(255, 255, 255, 0.45);
           border-radius: 22px;
-          background: #b8a0e4;
+          background: #004f9e;
           box-shadow: 0 14px 32px rgba(51, 15, 91, 0.12);
         }
 
@@ -304,7 +304,7 @@ const Hero = () => {
 
         .winter-hero-card-back-two {
           transform: rotate(5deg) translate(5px, 0);
-          background: #8061b8;
+          background: #004f9e;
           opacity: 0.65;
         }
 
@@ -394,10 +394,10 @@ const Hero = () => {
 
         .winter-hero-skill-list {
           position: absolute;
-          top: 50%;
+          top: 40%;
           right: -30px;
           display: grid;
-          gap: 11px;
+          gap: 8px;
           width: 165px;
           transform: translate(100%, -50%);
         }
@@ -680,9 +680,10 @@ const Hero = () => {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 312px;
+  gap: 270px;
   min-width: 0;
   margin-left:-48px;
+  margin-top:-15px;
 }
 
 
@@ -697,10 +698,10 @@ const Hero = () => {
   height: 33px;
   padding: 7px;
   margin-left:500px;
-  border: 1px solid var(--winter-blue);
+  border: 1px solid #004f9e;
   border-radius: 50%;
-  background: #004f9e;
-  color: white;
+  background: white;
+  color: #004f9e;
   cursor: pointer;
   transition:
     background 0.2s ease,
@@ -713,11 +714,10 @@ const Hero = () => {
   height: 18px;
 }
 .winter-carousel__arrow:hover {
-  background: #ffd500;
-  color: black;
+  background: #004f9e;
+  color: white;
 
 }
-
       `}</style>
 
       <section className="winter-hero">
