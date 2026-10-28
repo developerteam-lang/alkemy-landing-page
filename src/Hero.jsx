@@ -46,6 +46,14 @@ const Hero = () => {
 
   const activeSkill = skills[activeIndex];
   
+  const moveCarousel = (direction) => {
+    setActiveIndex((current) =>
+      direction === "up"
+        ? (current - 1 + skills.length) % skills.length
+        : (current + 1) % skills.length
+    );
+  };
+
   return (
     <>
       <style>{`
@@ -667,6 +675,49 @@ const Hero = () => {
           }
         }
 
+.winter-carousel__controls{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 312px;
+  min-width: 0;
+  margin-left:-48px;
+}
+
+
+
+
+.winter-carousel__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 33px;
+  width: 33px;
+  height: 33px;
+  padding: 7px;
+  margin-left:500px;
+  border: 1px solid var(--winter-blue);
+  border-radius: 50%;
+  background: #004f9e;
+  color: white;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.winter-carousel__arrow svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.winter-carousel__arrow:hover {
+  background: #ffd500;
+  color: black;
+
+}
+
       `}</style>
 
       <section className="winter-hero">
@@ -768,6 +819,25 @@ const Hero = () => {
                 </div>
               </div>
 
+<div className="winter-carousel__controls">
+              {/* UP ARROW */}
+              <button
+                type="button"
+                className="winter-carousel__arrow"
+                aria-label="Previous skill"
+                onClick={() => moveCarousel("up")}
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m7 14 5-5 5 5"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
               {/* SECTION LABELS */}
               <div className="winter-hero-skill-list">
                 {skills.map((skill, index) => (
@@ -784,6 +854,25 @@ const Hero = () => {
                   </div>
                 ))}
               </div>
+              
+
+            <button
+                type="button"
+                className="winter-carousel__arrow"
+                aria-label="Next skill"
+                onClick={() => moveCarousel("down")}
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m7 10 5 5 5-5"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
 
             </div>
           </div>
@@ -794,3 +883,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
