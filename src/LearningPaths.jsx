@@ -3,12 +3,11 @@ import "./LearningPaths.css";
 
 const plans = [
   {
-    name: "Foundation Program",
-    duration: "3 Weeks · 6 Live Sessions",
-    price: "₹7,000",
+    name: "",
+    duration: "",
+    price: "",
     description:
-      "Students beginning their AI journey and ready to explore creativity, academics and no-code building.",
-    buttonClass: "foundation",
+      "",
   },
   {
     name: "Accelerator Program",
@@ -20,31 +19,30 @@ const plans = [
     popular: true,
   },
   {
-    name: "Mastery Program",
-    duration: "5 Weeks · 10 Live Sessions",
-    price: "₹15,000",
+    name: "",
+    duration: "",
+    price: "",
     description:
-      "Students ready for deeper AI application, communication skills and career discovery.",
-    buttonClass: "mastery",
+      "",
   },
 ];
 
 const skillRows = [
-  { label: "Creative Skills", values: ["✓", "✓", "✓"] },
-  { label: "Academic Skills", values: ["✓", "✓", "✓"] },
-  { label: "No-Code Skills", values: ["✓", "✓", "✓"] },
-  { label: "Communication Skills", values: ["—", "✓", "✓"] },
-  { label: "Career Discovery", values: ["—", "—", "✓"] },
+  { label: "Creative Skills", values: ["", "✓", ""] },
+  { label: "Academic Skills", values: ["", "✓", ""] },
+  { label: "No-Code Skills", values: ["", "✓", ""] },
+  { label: "Communication Skills", values: ["", "✓", ""] },
+  { label: "Career Discovery", values: ["", "—", ""] },
 ];
 
 const includedRows = [
-  { label: "AI Lab + Class Recordings", values: ["1 year", "1 year", "1 year"] },
-  { label: "Pre-Recorded Videos + Resources", values: ["Included", "Included", "Included"] },
-  { label: "Assignments & Practice", values: ["6", "8", "10"] },
-  { label: "AI Speaking Coach", values: ["—", "Included", "Included"] },
+  { label: "AI Lab + Class Recordings", values: ["", "1 year", ""] },
+  { label: "Pre-Recorded Videos + Resources", values: ["", "Included", ""] },
+  { label: "Assignments & Practice", values: ["", "8", ""] },
+  { label: "AI Speaking Coach", values: ["", "Included", ""] },
   {
     label: "Personalised Career Counselling Report",
-    values: ["—", "—", "Included"],
+    values: ["", "—", ""],
   },
 ];
 
@@ -146,7 +144,8 @@ export default function LearningPaths() {
               <p className="learning-table__duration">{plan.duration}</p>
 
               <div className="learning-table__price">
-                {plan.price} <small>+ GST</small>
+                {plan.price} 
+                {/* <small>+ GST</small> */}
               </div>
             </div>
           ))}
