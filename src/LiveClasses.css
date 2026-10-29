@@ -23,7 +23,7 @@
   position: relative; 
   z-index: 1; 
   overflow: hidden; 
-  border: 1px solid ; 
+  border: 1px solid #004f9e; 
   border-radius: 18px; 
   background: #fff;  /* */
 }
@@ -31,7 +31,7 @@
   display: grid;
   padding: 0;
   /* repeat(5, minmax(0, 1fr))  -> 1.05fr 1fr 1fr 1.05fr 1fr */
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   /* 9px -> 12px */
   gap: 12px;
   border-bottom: 1px solid #004f9e;
@@ -66,7 +66,7 @@
   border-left:none;
 } 
   */
-.live-classes__tab-week { font-size: 12px; line-height: 1.2; font-weight: 600; }
+.live-classes__tab-week { font-size: 14px; line-height: 1.2; font-weight: 800; }
 .live-classes__tab-subtitle { font-size: 9px; line-height: 1.2; font-weight: 700; letter-spacing: 1px; }
 .live-classes__tab--active { background: #004f9e; color: #fff; }
 .live-classes__tab:focus-visible { outline: 3px solid #9b6bff; outline-offset: -4px; }
