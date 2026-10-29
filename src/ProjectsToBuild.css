@@ -65,7 +65,7 @@
 
 .projects-build__tab {
   min-width: 0;
-  height: 26px;
+  height: 38px;
   padding: 0 8px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,13 +77,13 @@
   color: #160b27;
   font-family: inherit;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
   transition: background 180ms ease, color 180ms ease;
 }
 
 .projects-build__tab:hover {
-  background: #e6d7f8;
+  background: #edf2f8;
 }
 
 .projects-build__tab--active,
