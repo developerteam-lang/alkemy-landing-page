@@ -301,6 +301,7 @@ export default function LiveClasses() {
           id="live-classes-content"
           role="tabpanel"
           aria-labelledby={`live-classes-tab-${activeWeek}`}
+          // style={{border: "1px solid #004f9e"}}
         >
           <h3 className="live-classes__section-title">
             {selectedWeek.heading}

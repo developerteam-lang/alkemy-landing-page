@@ -17,7 +17,7 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 18px 19px;
   max-width: 1440px;
-  margin: 0 40px;
+  margin: 0 91px;
 }
 
 /* All cards */
@@ -36,8 +36,8 @@
   z-index: 2;
   margin: 0;
   padding: 16px 16px 0;
-  color: #08070b;
-  font-size: 16px;
+  color: #000;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.25px;

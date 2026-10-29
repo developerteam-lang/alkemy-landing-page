@@ -95,7 +95,7 @@ a.site-header__logo h1 span{
   padding: 0 24px;
   border: none;
   border-radius: 999px;
-  background:#ffd500;
+  background:#ffee99;
   color: #1c0b57;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   font-size: 14px;
@@ -107,8 +107,8 @@ a.site-header__logo h1 span{
 }
 
 .site-header__btn:hover {
-  background: #004f9e;
-  color:white;
+  background: #ffe666;
+  color:black;
 }
 
 .site-header__btn:focus-visible {
