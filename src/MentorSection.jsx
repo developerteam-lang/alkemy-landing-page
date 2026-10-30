@@ -36,38 +36,93 @@ const mentors = [
   // },
 ];
 
-function MentorCard({ mentor, onSelect }) {
+function MentorCard({ mentor, isFlipped, onSelect }) {
+  const handleFlip = () => {
+    onSelect(mentor.id);
+  };
+
   return (
     <button
       type="button"
-      className="mentor-card"
-      onClick={() => onSelect(mentor)}
-      aria-label={`Read the full profile of ${mentor.name}`}
+      className={`mentor-card ${isFlipped ? "mentor-card--flipped" : ""}`}
+      onClick={handleFlip}
+      aria-label={
+        isFlipped
+          ? `Return to ${mentor.name}'s photo`
+          : `Read the full profile of ${mentor.name}`
+      }
+      aria-pressed={isFlipped}
     >
-      <div className="mentor-card__photo">
-        <img
-          src={mentor.image}
-          alt={mentor.name}
-          loading="lazy"
-          onError={(event) => {
-            event.currentTarget.style.visibility = "hidden";
-          }}
-        />
-      </div>
+      <span className="mentor-card__inner">
+        {/* FRONT SIDE */}
+        <span className="mentor-card__face mentor-card__front">
+          <span className="mentor-card__photo">
+            <img
+              src={mentor.image}
+              alt={mentor.name}
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.style.visibility = "hidden";
+              }}
+            />
+          </span>
 
-      <div className="mentor-card__details">
-        <h3>{mentor.name}</h3>
-        <p>{mentor.role}</p>
-        <p className="mentor-card__organization">
-          {mentor.organization}
-        </p>
-      </div>
+          <span className="mentor-card__details">
+            <span className="mentor-card__name">
+              {mentor.name}
+            </span>
+
+            <span className="mentor-card__role">
+              {mentor.role}
+            </span>
+
+            {mentor.organization && (
+              <span className="mentor-card__organization">
+                {mentor.organization}
+              </span>
+            )}
+          </span>
+        </span>
+
+        {/* BACK SIDE */}
+        <span className="mentor-card__face mentor-card__back">
+          <span className="mentor-card__back-content">
+            <span className="mentor-card__back-name">
+              {mentor.name}
+            </span>
+
+            <span className="mentor-card__back-role">
+              {mentor.role}
+            </span>
+
+            {mentor.organization && (
+              <span className="mentor-card__back-organization">
+                {mentor.organization}
+              </span>
+            )}
+
+            <span className="mentor-card__bio">
+              {mentor.bio}
+            </span>
+
+            <span className="mentor-card__back-hint">
+              TAP TO GO BACK
+            </span>
+          </span>
+        </span>
+      </span>
     </button>
   );
 }
 
 export default function MentorsSection() {
-  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [flippedMentorId, setFlippedMentorId] = useState(null);
+
+  const handleMentorSelect = (mentorId) => {
+    setFlippedMentorId((currentId) =>
+      currentId === mentorId ? null : mentorId
+    );
+  };
 
   return (
     <section className="mentors-section" id="mentors">
@@ -75,6 +130,7 @@ export default function MentorsSection() {
         className="mentors-section__decoration mentors-section__decoration--left"
         aria-hidden="true"
       />
+
       <span
         className="mentors-section__decoration mentors-section__decoration--right"
         aria-hidden="true"
@@ -100,7 +156,8 @@ export default function MentorsSection() {
             <MentorCard
               key={mentor.id}
               mentor={mentor}
-              onSelect={setSelectedMentor}
+              isFlipped={flippedMentorId === mentor.id}
+              onSelect={handleMentorSelect}
             />
           ))}
         </div>
@@ -119,56 +176,10 @@ export default function MentorsSection() {
               strokeLinejoin="round"
             />
           </svg>
+
           TAP A CARD TO READ THE FULL PROFILE
         </p>
       </div>
-
-      {selectedMentor && (
-        <div
-          className="mentor-modal"
-          role="presentation"
-          onClick={() => setSelectedMentor(null)}
-        >
-          <div
-            className="mentor-modal__content"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="mentor-modal-title"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="mentor-modal__close"
-              onClick={() => setSelectedMentor(null)}
-              aria-label="Close mentor profile"
-            >
-              ×
-            </button>
-
-            <img
-              className="mentor-modal__photo"
-              src={selectedMentor.image}
-              alt={selectedMentor.name}
-            />
-
-            <h3 id="mentor-modal-title">
-              {selectedMentor.name}
-            </h3>
-
-            <p className="mentor-modal__role">
-              {selectedMentor.role}
-            </p>
-
-            <p className="mentor-modal__organization">
-              {selectedMentor.organization}
-            </p>
-
-            <p className="mentor-modal__bio">
-              {selectedMentor.bio}
-            </p>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

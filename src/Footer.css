@@ -72,9 +72,10 @@
 .toi-footer__copyright {
   margin: 0;
   color: #8ba9c8;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
+  padding-left:8px;
 }
 
 /* RIGHT SIDE */

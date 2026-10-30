@@ -1,4 +1,3 @@
-
 .mentors-section {
   position: relative;
   width: 100%;
@@ -17,6 +16,7 @@
   box-sizing: border-box;
 }
 
+/* Main container */
 .mentors-section__container {
   position: relative;
   z-index: 1;
@@ -76,35 +76,43 @@
   line-height: 1.5;
 }
 
-/* Four mentor cards */
+/* Mentor grid */
 .mentors-section__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 19px;
   width: 100%;
+  align-items: stretch;
 }
 
-/* Card */
+/* Main flip card */
 .mentor-card {
-  display: flex;
+  position: relative;
+  display: block;
+  width: 100%;
   min-width: 0;
-  flex-direction: column;
+  height: 235px;
   padding: 0;
-  overflow: hidden;
-  border: 1px solid #e2d6f1;
+  border: 0;
   border-radius: 8px;
-  background: #e3d9f2;
+  background: transparent;
   text-align: left;
   font-family: inherit;
   cursor: pointer;
+
+  /* Creates the 3D space for the flip */
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mentor-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 18px rgb(66 28 112 / 12%);
 }
 
 .mentor-card:focus-visible {
@@ -112,14 +120,63 @@
   outline-offset: 3px;
 }
 
+/* Rotating inner card */
+.mentor-card__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+  border-radius: 8px;
+}
+
+/* Flip when clicked */
+.mentor-card--flipped .mentor-card__inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.mentor-card__face {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  border: 1px solid #e2d6f1;
+  border-radius: 8px;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Front face */
+.mentor-card__front {
+  background: #e3d9f2;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
 /* Photo */
 .mentor-card__photo {
   position: relative;
   display: flex;
-  width:100%;
-  height: 184px;
-  padding:0;
-  margin:0;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
@@ -133,28 +190,34 @@
 }
 
 .mentor-card__photo img {
-  /* */
   display: block;
-  margin:0;
-  padding:0;
-  max-width:none; 
   width: 100%;
   height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   object-fit: cover;
   object-position: center center;
 }
 
-/* Purple name panel */
+/* Name panel */
 .mentor-card__details {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
   min-height: 51px;
-  padding: 10px 6px 7px;
+  padding: 12px 8px 6px 14px;
   background: #004f9e;
   color: #ffffff;
+  text-align:center;
 }
 
-.mentor-card__details h3 {
+/* Mentor name */
+.mentor-card__name {
+  display: block;
   margin: 0 0 4px;
   overflow-wrap: anywhere;
   color: #ffffff;
@@ -163,7 +226,9 @@
   line-height: 1.2;
 }
 
-.mentor-card__details p {
+/* Mentor role */
+.mentor-card__role {
+  display: block;
   margin: 0;
   color: #ffffff;
   font-size: 12px;
@@ -171,8 +236,88 @@
   line-height: 1.25;
 }
 
-.mentor-card__details .mentor-card__organization {
+/* Organization */
+.mentor-card__organization {
+  display: block;
+  margin-top: 3px;
+  color: #ffffff;
   font-size: 10px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Back face */
+.mentor-card__back {
+  justify-content: flex-start;
+  padding: 0;
+  background: #004f9e;
+  color: #ffffff;
+
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Details displayed on the back */
+.mentor-card__back-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 15px 12px 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.mentor-card__back-name {
+  display: block;
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.mentor-card__back-role {
+  display: block;
+  margin: 0 0 5px;
+  color: #e6d7ff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.mentor-card__back-organization {
+  display: block;
+  margin: 0 0 7px;
+  color: #e6d7ff;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.mentor-card__bio {
+  display: block;
+  margin: 4px 0 0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  overflow-y: auto;
+}
+
+/* Small instruction at the bottom of the back */
+.mentor-card__back-hint {
+  display: block;
+  flex: 0 0 auto;
+  margin-top: auto;
+  padding-top: 8px;
+  color: #e6d7ff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.7px;
 }
 
 /* Instruction below the cards */
@@ -183,7 +328,7 @@
   gap: 5px;
   margin: 10px 0 0;
   color: #17121d;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.7px;
@@ -193,77 +338,6 @@
   width: 12px;
   height: 12px;
   flex: 0 0 12px;
-}
-
-/* Profile modal */
-.mentor-modal {
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: rgb(20 10 35 / 60%);
-}
-
-.mentor-modal__content {
-  position: relative;
-  width: 100%;
-  max-width: 350px;
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 24px;
-  border-radius: 14px;
-  background: #ffffff;
-  text-align: center;
-  box-shadow: 0 15px 50px rgb(0 0 0 / 20%);
-}
-
-.mentor-modal__close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  width: 30px;
-  height: 30px;
-  border: 0;
-  border-radius: 50%;
-  background: #f2e9ff;
-  color: #4500a5;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.mentor-modal__photo {
-  display: block;
-  width: 110px;
-  height: 125px;
-  margin: 0 auto 12px;
-  border-radius: 8px;
-  background: #e8def7;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
-.mentor-modal__content h3 {
-  margin: 0 0 6px;
-  color: #4500a5;
-  font-size: 20px;
-}
-
-.mentor-modal__role,
-.mentor-modal__organization {
-  margin: 4px 0;
-  color: #554b61;
-  font-size: 12px;
-}
-
-.mentor-modal__bio {
-  margin: 14px 0 0;
-  color: #403746;
-  font-size: 13px;
-  line-height: 1.7;
 }
 
 /* Tablet */
@@ -281,8 +355,8 @@
     gap: 16px;
   }
 
-  .mentor-card__photo {
-    height: 175px;
+  .mentor-card {
+    height: 232px;
   }
 
   .mentor-card__details {
@@ -290,20 +364,37 @@
     padding: 10px 8px;
   }
 
-  .mentor-card__details h3 {
+  .mentor-card__name {
     font-size: 12px;
   }
 
-  .mentor-card__details p {
+  .mentor-card__role {
     font-size: 9px;
   }
 
-  .mentor-card__details .mentor-card__organization {
+  .mentor-card__organization {
     font-size: 8px;
+  }
+
+  .mentor-card__back-content {
+    padding: 12px 10px 9px;
+  }
+
+  .mentor-card__back-name {
+    font-size: 12px;
+  }
+
+  .mentor-card__back-role {
+    font-size: 10px;
+  }
+
+  .mentor-card__bio {
+    font-size: 10px;
+    line-height: 1.5;
   }
 }
 
-/* Mobile */
+/* Small mobile screens */
 @media (max-width: 380px) {
   .mentors-section {
     padding: 32px 14px 26px;
@@ -321,21 +412,57 @@
     gap: 12px;
   }
 
-  .mentor-card__photo {
-    height: 145px;
+  .mentor-card {
+    height: 210px;
   }
 
-  .mentor-card__details h3 {
+  .mentor-card__details {
+    padding: 8px 6px;
+  }
+
+  .mentor-card__name {
     font-size: 10px;
+  }
+
+  .mentor-card__role {
+    font-size: 9px;
+  }
+
+  .mentor-card__back-content {
+    padding: 10px 8px 8px;
+  }
+
+  .mentor-card__back-name {
+    font-size: 11px;
+  }
+
+  .mentor-card__back-role {
+    font-size: 9px;
+  }
+
+  .mentor-card__bio {
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .mentor-card__back-hint {
+    font-size: 7px;
   }
 }
 
-
-/* Desktop only: center the mentor card */
-/* */
+/* Desktop: keep the existing centered single-card layout */
 @media (min-width: 651px) {
   .mentors-section__grid {
     grid-template-columns: minmax(0, 240px);
-   justify-content: center;
+    justify-content: center;
   }
-} 
+}
+
+/* Respect the user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .mentor-card,
+  .mentor-card__inner {
+    transition-duration: 0.01ms;
+    -webkit-transition-duration: 0.01ms;
+  }
+}
