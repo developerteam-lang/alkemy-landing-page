@@ -9,7 +9,7 @@ const batches = {
       label: "WINNER - CLASS 8",
       videoUrl:
         "https://www.youtube.com/watch?v=fuosW7R-F4I",
-      thumbnail: "/images/thumbnails/kimmaya.png",
+      thumbnail: "/images/thumbnails/kimmaya-thumbnail.png",
     },
     {
       name: "Shazain",
