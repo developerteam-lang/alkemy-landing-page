@@ -9,14 +9,14 @@ const batches = {
       label: "WINNER - CLASS 8",
       videoUrl:
         "https://www.youtube.com/watch?v=fuosW7R-F4I",
-      thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      thumbnail: "/images/thumbnails/kimmaya.png",
     },
     {
       name: "Shazain",
       className: "Class 9",
       label: "WINNER - CLASS 9",
       videoUrl: "https://www.youtube.com/watch?v=hnpz4xJX9gM",
-      thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      thumbnail: "/images/thumbnails/shazain-thumbnail.png",
     },
     {
       name: "Kaustabh",
@@ -24,7 +24,7 @@ const batches = {
       label: "WINNER - CLASS 10",
       // Replace with Rohan's own video URL.
       videoUrl: "https://www.youtube.com/watch?v=awkfDBOJaOE",
-      thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      thumbnail: "/images/thumbnails/kaustabh-thumbnail.png",
     },
   ],
   1: [
@@ -33,14 +33,14 @@ const batches = {
       className: "Class 7",
       label: "WINNER - CLASS 7",
       videoUrl: "https://www.youtube.com/watch?v=qImbQva5osU",
-      thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      thumbnail: "/images/thumbnails/drishti-thumbnail.png",
     },
     {
       name: "Anvi",
       className: "Class 10",
       label: "WINNER - CLASS 10",
       videoUrl: "https://www.youtube.com/watch?v=qoYFcDIlUSA",
-      thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      thumbnail: "/images/thumbnails/anvi-thumbnail.png",
     }
     //  ,{
     //   name: "Srikar",
@@ -102,7 +102,7 @@ function getVideoEmbedUrl(videoUrl) {
 }
 
 function WinnerCard({ winner }) {
-  // const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const embedUrl = getVideoEmbedUrl(winner.videoUrl);
 
@@ -111,7 +111,7 @@ function WinnerCard({ winner }) {
       {/* <div className="winner-card__badge">{winner.label}</div> */}
 
       <div className="winner-card__video">
-        {/*  {isPlaying ? (   */}
+        {/*  */}{isPlaying ? (   
           <iframe
             className="winner-card__player"
             src={embedUrl}
@@ -120,7 +120,7 @@ function WinnerCard({ winner }) {
             allowFullScreen
             referrerPolicy="strict-origin-when-cross-origin"
           />
-         {/* ) : ( 
+          ) : ( 
            <button
             type="button"
             className="winner-card__video-trigger"
@@ -139,7 +139,7 @@ function WinnerCard({ winner }) {
                 <path d="M8 5.8c0-.8.9-1.3 1.6-.8l9.1 6.2a1 1 0 0 1 0 1.6l-9.1 6.2c-.7.5-1.6 0-1.6-.8V5.8Z" />
               </svg>
             </span>
-          </button>  )}  */}
+          </button>  )} {/* */}
        
       </div>
 

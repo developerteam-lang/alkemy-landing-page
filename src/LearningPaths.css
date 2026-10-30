@@ -277,17 +277,17 @@
 
 .learning-countdown strong {
   color: #008000;
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .learning-countdown__timer {
-  padding: 3px 6px;
+  padding: 6px 6px;
   border: 1px solid #806700;
   border-radius: 2px;
   background: #ffdf43;
   color: #222222;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.1;
   font-variant-numeric: tabular-nums;
 }
