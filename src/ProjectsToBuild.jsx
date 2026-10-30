@@ -117,28 +117,34 @@ const projectsData = {
     tools: ["ChatGPT", "Canva", "HeyGen", "Google Slides"],
     projects: [
       {
-        title: "Bright Communication Learning Scene",
-        description: "Turn your ideas into short videos",
+        title: "AI Study Assistant App",
+        description: "A personal academic tool for notes generation, revision planning, and exam prep.",
         image:
           "/images/projects-to-build/bright-communication-learning-scene.png",
       },
       {
-        title: "Creative Presentation",
-        description: "Present ideas through engaging visuals",
+        title: "AI Career Explorer Tool",
+        description: "A tool that suggests careers, skill paths, or learning resources based on interests and strengths.",
         image:
           "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=500&q=85",
       },
       {
-        title: "Digital Avatar",
-        description: "Create a character to tell your story",
+        title: "AI Content Creator Tool",
+        description: "A creative assistant that generates scripts, captions, social media ideas, or content plans.",
         image:
           "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=500&q=85",
       },
       {
-        title: "Podcast Project",
-        description: "Plan and create your own podcast",
+        title: "AI Research Assistant",
+        description: "A tool that finds, summarizes, and structures information into usable formats.",
         image:
           "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=500&q=85",
+      },
+      {
+        title: "AI for Social Impact",
+        description: "A product that addresses a real community or social challenge.",
+        image:
+          "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
@@ -176,6 +182,7 @@ const projectsData = {
     ],
   },
 };
+
 
 const ProjectsToBuild = () => {
   const [activeCategory, setActiveCategory] = useState(
