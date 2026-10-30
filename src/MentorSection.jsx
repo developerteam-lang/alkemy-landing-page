@@ -6,7 +6,7 @@ const mentors = [
     id: 1,
     name: "Praveen Kumar",
     role: "AI Trainer",
-    organization: "The Cutting Edge School",
+    organization: "",
     image: "/images/trainers/praveen-ai-trainer.jpg",
     bio: "Mentor helping students explore AI through practical, project-led learning.",
   }

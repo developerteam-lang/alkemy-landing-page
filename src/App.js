@@ -6,7 +6,7 @@ import ProgramInTwoMinutes from './ProgramInTwoMinutes';
 import AIProgramHighlights from './AIProgramHighlights';
 import WinterCampFAQ from './WinterCampFAQ';
 import LearningPaths from './LearningPaths';
-import LiveClassSchedule from './LiveClassSchedule';
+// import LiveClassSchedule from './LiveClassSchedule';
 import WinnersSection from './WinnersSection';
 import TrustedSchools from './TrustedSchools';
 import ProjectsToBuild from './ProjectsToBuild';
@@ -36,7 +36,7 @@ function App() {
       </div>
       <LiveToolOrbit />
       <MentorSection />
-      <LiveClassSchedule />
+      {/* <LiveClassSchedule /> */}
       <LearningPaths />
       <WinnersSection />
       <WinterCampFAQ />
