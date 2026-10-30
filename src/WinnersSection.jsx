@@ -52,10 +52,32 @@ const batches = {
   ],
 };
 
-// Convert YouTube and Google Drive links into embeddable player URLs.
 function getVideoEmbedUrl(videoUrl) {
   try {
     const url = new URL(videoUrl);
+
+    let videoId = "";
+
+    // YouTube URLs
+    if (
+      url.hostname === "www.youtube.com" ||
+      url.hostname === "youtube.com" ||
+      url.hostname === "m.youtube.com"
+    ) {
+      videoId =
+        url.searchParams.get("v") ||
+        url.pathname.match(/^\/(?:embed|shorts)\/([^/]+)/)?.[1];
+    }
+
+    // Short YouTube URLs
+    else if (url.hostname === "youtu.be") {
+      videoId = url.pathname.split("/").filter(Boolean)[0];
+    }
+
+    // YouTube embed URL with autoplay
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`;
+    }
 
     // Google Drive video
     if (
@@ -66,32 +88,6 @@ function getVideoEmbedUrl(videoUrl) {
 
       if (fileId) {
         return `https://drive.google.com/file/d/${fileId}/preview`;
-      }
-
-      return videoUrl;
-    }
-
-    // YouTube video
-    if (
-      url.hostname === "www.youtube.com" ||
-      url.hostname === "youtube.com" ||
-      url.hostname === "m.youtube.com"
-    ) {
-      const videoId =
-        url.searchParams.get("v") ||
-        url.pathname.match(/\/(?:embed|shorts)\/([^/]+)/)?.[1];
-
-      if (videoId) {
-        return `https://www.youtube.com/embed/${videoId}`;
-      }
-    }
-
-    // Short YouTube links
-    if (url.hostname === "youtu.be") {
-      const videoId = url.pathname.split("/").filter(Boolean)[0];
-
-      if (videoId) {
-        return `https://www.youtube.com/embed/${videoId}`;
       }
     }
 
