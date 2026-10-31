@@ -93,25 +93,25 @@ const projectsData = {
         title: "AI Career Explorer Tool",
         description: "A tool that suggests careers, skill paths, or learning resources based on interests and strengths.",
         image:
-          "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-career-explorer-tool.png",
       },
       {
         title: "AI Content Creator Tool",
         description: "A creative assistant that generates scripts, captions, social media ideas, or content plans.",
         image:
-          "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-content-creator-tool.png",
       },
       {
         title: "AI Research Assistant",
         description: "A tool that finds, summarizes, and structures information into usable formats.",
         image:
-          "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-research-assistance-app.png",
       },
       {
         title: "AI for Social Impact",
         description: "A product that addresses a real community or social challenge.",
         image:
-          "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=500&q=85",
+          "/images/projects-to-build/ai-for-social.png",
       },
     ],
   },
@@ -139,6 +139,7 @@ const projectsData = {
         description: "Showcase your projects and creativity",
         image:
           "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
+
       },
       {
         title: "AI Business Idea",
