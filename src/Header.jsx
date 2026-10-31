@@ -47,7 +47,7 @@ function Header({
                 }
               }}
           >
-            Download Brochure
+            Explore Courses
           </button>
         </div>
       </div>
