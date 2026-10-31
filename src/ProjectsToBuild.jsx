@@ -33,7 +33,7 @@ const projectsData = {
         description: "A tool that finds, summarizes, and structures information into usable formats.",
         image:
           "/images/projects-to-build/ai-research-assistant.png",
-        playable: true,
+        // playable: true,
       },
       {
         title: "Gamified Learning Quiz",
@@ -84,39 +84,6 @@ const projectsData = {
     tools: ["Lovable", "Canva", "Figma", "ChatGPT"],
     projects: [
       {
-        title: "No-Code Ideas in Action",
-        description: "Create your own website with AI",
-        image:
-          "/images/projects-to-build/no-code-ideas-in-action.png",
-      },
-      {
-        title: "App Prototype",
-        description: "Design a simple app idea",
-        image:
-          "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=85",
-      },
-      {
-        title: "Digital Portfolio",
-        description: "Showcase your projects and creativity",
-        image:
-          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
-      },
-      {
-        title: "AI Business Idea",
-        description: "Turn a creative idea into a prototype",
-        image:
-          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
-      },
-    ],
-  },
-
-  Communication: {
-    heading: "Express Ideas With Confidence",
-    description:
-      "Develop storytelling, presentation and communication skills through creative projects, videos and engaging presentations.",
-    tools: ["ChatGPT", "Canva", "HeyGen", "Google Slides"],
-    projects: [
-      {
         title: "AI Study Assistant App",
         description: "A personal academic tool for notes generation, revision planning, and exam prep.",
         image:
@@ -145,6 +112,39 @@ const projectsData = {
         description: "A product that addresses a real community or social challenge.",
         image:
           "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=500&q=85",
+      },
+    ],
+  },
+
+  Communication: {
+    heading: "Express Ideas With Confidence",
+    description:
+      "Develop storytelling, presentation and communication skills through creative projects, videos and engaging presentations.",
+    tools: ["ChatGPT", "Canva", "HeyGen", "Google Slides"],
+    projects: [
+      {
+        title: "No-Code Ideas in Action",
+        description: "Create your own website with AI",
+        image:
+          "/images/projects-to-build/no-code-ideas-in-action.png",
+      },
+      {
+        title: "App Prototype",
+        description: "Design a simple app idea",
+        image:
+          "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=85",
+      },
+      {
+        title: "Digital Portfolio",
+        description: "Showcase your projects and creativity",
+        image:
+          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
+      },
+      {
+        title: "AI Business Idea",
+        description: "Turn a creative idea into a prototype",
+        image:
+          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
