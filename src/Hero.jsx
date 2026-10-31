@@ -66,12 +66,13 @@ const Hero = () => {
           background:
             radial-gradient(
               circle at 90% 20%,
-              rgba(233, 215, 255, 0.25),
+              #fffbe5,
               transparent 32%
             ),
             #fffcf5;
-          color: #28105f;
+          color: #004f9e;
           font-family: Arial, Helvetica, sans-serif;
+          margin-top:41px;
         }
 
         .winter-hero *,
@@ -88,12 +89,12 @@ const Hero = () => {
           opacity: 0.28;
           background-image:
             linear-gradient(
-              rgba(112, 77, 158, 0.08) 1px,
+              #fff7cc 1px,
               transparent 1px
             ),
             linear-gradient(
               90deg,
-              rgba(112, 77, 158, 0.08) 1px,
+              #dae5f1 1px,
               transparent 1px
             );
           background-size: 28px 28px;
@@ -192,7 +193,7 @@ const Hero = () => {
           border: 1px solid #dfd0f6;
           border-radius: 30px;
           background: #fff;
-          color: #4b277e;
+          color: #004f9e;
           font-size: 12px;
           font-weight: 600;
         }
@@ -243,7 +244,7 @@ const Hero = () => {
           padding: 0 25px;
           border: 0;
           border-radius: 30px;
-          background: #01357f;
+          background: #004f9e;
           box-shadow: 0 7px 18px rgba(49, 7, 111, 0.17);
           color: #fff;
           font-size: 14px;
@@ -256,7 +257,7 @@ const Hero = () => {
 
         .winter-hero-cta:hover {
           transform: translateY(-2px);
-          background: #4c1499;
+          background: #3473b2;
         }
 
         .winter-hero-visual {
@@ -407,14 +408,15 @@ const Hero = () => {
           align-items: center;
           gap: 8px;
           padding: 9px 11px;
-          color: #786b8b;
-          font-size: 13px;
+          color: #004f9e;
+          font-size: 12px;
           font-weight: 600;
           transition: all 0.35s ease;
         }
 
         .winter-hero-skill.active {
-          color: #3d146f;
+          color:black;
+          font-weight:700;
           transform: translateX(-5px);
         }
 
@@ -427,7 +429,7 @@ const Hero = () => {
           justify-content: center;
           border-radius: 50%;
           background: #f0e7ff;
-          color: #6937a6;
+          color: #004f9e;
           font-size: 11px;
         }
 
@@ -546,7 +548,7 @@ const Hero = () => {
 
           .winter-hero-title {
             max-width: 520px;
-            margin: 0 auto;
+            margin: 48px auto;
             font-size: clamp(35px, 9vw, 48px);
             letter-spacing: -1.2px;
           }
@@ -592,7 +594,8 @@ const Hero = () => {
           }
 
           .winter-hero-image-wrap {
-            height: 68%;
+
+          height: 68%;
             padding: 16px 14px 6px;
           }
 
@@ -687,8 +690,6 @@ const Hero = () => {
 }
 
 
-
-
 .winter-carousel__arrow {
   display: flex;
   align-items: center;
@@ -716,7 +717,6 @@ const Hero = () => {
 .winter-carousel__arrow:hover {
   background: #004f9e;
   color: white;
-
 }
       `}</style>
 
@@ -724,11 +724,12 @@ const Hero = () => {
         <div className="winter-hero-inner">
           {/* LEFT CONTENT */}
           <div className="winter-hero-content" key="hero-content">
-            {/* */}
+            {/* 
             <div className="winter-hero-eyebrow">
               <span />
               AI WINTER CAMP FOR STUDENTS
             </div> 
+            */}
 
             <h1 className="winter-hero-title">
               Build Skills.
@@ -819,7 +820,7 @@ const Hero = () => {
                 </div>
               </div>
 
-<div className="winter-carousel__controls">
+            <div className="winter-carousel__controls">
               {/* UP ARROW */}
               <button
                 type="button"
@@ -848,7 +849,8 @@ const Hero = () => {
                     }`}
                   >
                     <span className="winter-hero-skill-dot">
-                      {activeIndex === index ? "✓" : "✦"}
+                      {/* */}{activeIndex === index ? "✓" : "✦"} 
+                      {/* {activeIndex === index ? "●" : "●"} */}
                     </span>
                     <span>{skill.title}</span>
                   </div>

@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  border-bottom:1px solid #004f9e;
 } /* */
 /* .site-header {
   position: fixed;
