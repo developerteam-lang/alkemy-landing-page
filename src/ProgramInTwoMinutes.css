@@ -61,14 +61,15 @@
 
 .program-preview__video {
   position: relative;
-  width: 681px;
+  width: 791px;
+  height:450px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 9px;
+  border-radius: 16px;
   background: #171717;
   border: 1px solid rgba(65, 0, 153, 0.12);
   box-sizing: border-box;
-  margin-left:-54px;
+  margin-left:-103px;
 }
 
 .program-preview__thumbnail {
