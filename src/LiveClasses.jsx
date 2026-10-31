@@ -208,9 +208,9 @@ function SessionCard({ session }) {
             {session.title}
           </h4>
 
-          <span className="live-classes__day">
+          {/* <span className="live-classes__day">
             {session.day}
-          </span>
+          </span> */}
         </div>
 
         <p className="live-classes__description">
