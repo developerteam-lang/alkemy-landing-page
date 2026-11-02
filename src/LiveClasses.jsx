@@ -73,7 +73,7 @@ const weekContent = [
           "Getting the primary AI-powered feature working end to end",
         day: "Sunday",
         tools: ["Gemini", "Canva AI"],
-        image: "/images/live-classes/smart-study-kits.png",
+        image: "/images/live-classes/core_feature_build.png",
         imageAlt: "Illustration of educational study materials",
       },
       {
@@ -82,7 +82,7 @@ const weekContent = [
           "Breaking the product deliberately, fixing edge cases, refining prompts",
         day: "Saturday",
         tools: ["Gemini", "NotebookLM"],
-        image: "/images/live-classes/ai-tutor.png",
+        image: "/images/live-classes/testing_and_iteration.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
@@ -91,7 +91,7 @@ const weekContent = [
           "Visual craft, product copy, deployment",
         day: "Sunday",
         tools: ["Canva AI", "ChatGPT"],
-        image: "/images/live-classes/smart-study-kits.png",
+        image: "/images/live-classes/polish_and_publish.png",
         imageAlt: "Illustration of educational study materials",
       },
       {
@@ -100,7 +100,7 @@ const weekContent = [
           "Testing each other's live products, structuring the demo narrative",
         day: "Saturday",
         tools: ["Gemini", "Canva AI"],
-        image: "/images/live-classes/ai-tutor.png",
+        image: "/images/live-classes/peer_testing.png",
         imageAlt: "AI tutor robot using a laptop",
       },
       {
@@ -109,7 +109,7 @@ const weekContent = [
           "Timed run-throughs, feedback, final fixes",
         day: "Sunday",
         tools: ["ChatGPT", "NotebookLM"],
-        image: "/images/live-classes/smart-study-kits.png",
+        image: "/images/live-classes/reharsal_and_tech_check.png",
         imageAlt: "Illustration of educational study materials",
       },
     ],
