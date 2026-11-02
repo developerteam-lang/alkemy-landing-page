@@ -346,3 +346,88 @@
    object-fit: cover;
    background: #000;
 }
+
+
+/* Communication video thumbnail */
+.projects-build__thumbnail-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  background: #000;
+  cursor: pointer;
+}
+
+/* Thumbnail image */
+.projects-build__thumbnail-button .projects-build__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+/* Slight zoom on hover */
+.projects-build__thumbnail-button:hover .projects-build__image {
+  transform: scale(1.04);
+}
+
+/* Red YouTube-style play button */
+.projects-build__youtube-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;  
+  background: #ffffff;  
+  transition: transform 0.2s ease;
+}
+
+/* Center the play icon */
+.projects-build__youtube-play svg {
+  display: block;
+  margin-left: 3px;
+}
+
+/* Hover interaction */
+.projects-build__thumbnail-button:hover .projects-build__youtube-play {
+  background: #e60023;
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+/* Keep the video fitted inside the existing card */
+.projects-build__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #000;
+}
+
+/* Accessible keyboard focus */
+.projects-build__thumbnail-button:focus-visible {
+  outline: 3px solid #004f9e;
+  outline-offset: -3px;
+}
+
+/* Mobile: retain the existing card layout */
+@media (max-width: 600px) {
+  .projects-build__youtube-play {
+    width: 43px;
+    height: 31px;
+    border-radius: 8px;
+  }
+
+  .projects-build__youtube-play svg {
+    width: 19px;
+    height: 19px;
+  }
+}

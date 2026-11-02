@@ -11,9 +11,10 @@ const categories = [
 
 const communicationVideoUrls = [
   "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
-  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
-  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
-  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
+  "https://www.youtube-nocookie.com/embed/hnpz4xJX9gM",
+  "https://www.youtube-nocookie.com/embed/awkfDBOJaOE",
+  "https://www.youtube-nocookie.com/embed/qImbQva5osU",
+  "https://www.youtube-nocookie.com/embed/qoYFcDIlUSA",
 ];
 const projectsData = {
   "Creative Skills": {
@@ -113,12 +114,12 @@ const projectsData = {
         image:
           "/images/projects-to-build/ai-research-assistance-app.png",
       },
-      {
-        title: "AI for Social Impact",
-        description: "A product that addresses a real community or social challenge.",
-        image:
-          "/images/projects-to-build/ai-for-social.png",
-      },
+      // {
+      //   title: "AI for Social Impact",
+      //   description: "A product that addresses a real community or social challenge.",
+      //   image:
+      //     "/images/projects-to-build/ai-for-social.png",
+      // },
     ],
   },
 
@@ -132,25 +133,37 @@ const projectsData = {
         title: "No-Code Ideas in Action",
         description: "Create your own website with AI",
         // image:"/images/projects-to-build/no-code-ideas-in-action.png",
-        videoUrl:communicationVideoUrls[0]
+        videoUrl:communicationVideoUrls[0],
+        thumbnail:"/images/thumbnails/kimmaya-thumbnail.png"
       },
       {
         title: "App Prototype",
         description: "Design a simple app idea",
         // image:"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=85",
-        videoUrl:communicationVideoUrls[1]
+        videoUrl:communicationVideoUrls[1],
+        thumbnail:"/images/thumbnails/shazain-thumbnail.png"
+
       },
       {
         title: "Digital Portfolio",
         description: "Showcase your projects and creativity",
         // image:"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
-        videoUrl:communicationVideoUrls[2]
+        videoUrl:communicationVideoUrls[2],
+        thumbnail:"/images/thumbnails/kaustabh-thumbnail.png"
       },
       {
         title: "AI Business Idea",
         description: "Turn a creative idea into a prototype",
-        image:"https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
-        videoUrl:communicationVideoUrls[3]
+        // image:"https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
+        videoUrl:communicationVideoUrls[3],
+        thumbnail:"/images/thumbnails/drishti-thumbnail.png"
+      },
+      {
+        title: "Digital Portfolio",
+        description: "Showcase your projects and creativity",
+        // image:"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
+        videoUrl:communicationVideoUrls[4],
+        thumbnail:"/images/thumbnails/anvi-thumbnail.png"
       },
     ],
   },
@@ -194,7 +207,7 @@ const ProjectsToBuild = () => {
   const [activeCategory, setActiveCategory] = useState(
     "Creative Skills"
   );
-
+  const [playingVideo, setPlayingVideo] = useState(null);
   const activeData = projectsData[activeCategory];
   return (
     <section className="projects-build">
@@ -251,67 +264,111 @@ const ProjectsToBuild = () => {
             </p>
           </div>
 
-          <div className="projects-build__grid">
-            {activeData.projects.map((project, index) => (
-              <article
-                className="projects-build__card"
-                key={`${activeCategory}-${project.title}`}
+         <div className="projects-build__grid">
+  {activeData.projects.map((project, index) => {
+    const isCommunication = activeCategory === "Communication";
+
+    // Use the first video's thumbnail for every Communication card.
+    // You can replace this image with individual thumbnails later.
+    // const thumbnailUrl =
+    //   "https://img.youtube.com/vi/fuosW7R-F4I/hqdefault.jpg";
+    
+    
+    // Convert the YouTube embed URL into a playable URL.
+    const getPlayableVideoUrl = (url) => {
+      const videoId = url.split("/embed/")[1]?.split("?")[0];
+
+      return videoId
+        ? `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`
+        : url;
+    };
+
+    return (
+      <article
+        className="projects-build__card"
+        key={`${activeCategory}-${project.title}-${index}`}
+      >
+        <div className="projects-build__image-wrapper">
+          {isCommunication && project.videoUrl ? (
+            playingVideo === project.videoUrl ? (
+              <iframe
+                src={getPlayableVideoUrl(project.videoUrl)}
+                title={project.title}
+                className="projects-build__video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                className="projects-build__thumbnail-button"
+                onClick={() => setPlayingVideo(project.videoUrl)}
+                aria-label={`Play video: ${project.title}`}
               >
-                <div className="projects-build__image-wrapper">
-                 
-                  {project.videoUrl ? (
-                 <iframe src={project.videoUrl} 
-                         title={project.title}
-                         className="projects-build__video"
-                           />  
-                ):(
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="projects-build__image"
-                    loading="lazy"
-                  />
-                )}
+                <img
+                  src={project.thumbnail}
+                  alt={`${project.title} video thumbnail`}
+                  className="projects-build__image"
+                  loading="lazy"
+                />
 
-                  {project.playable && (
-                    <button
-                      type="button"
-                      className="projects-build__play"
-                      aria-label={`Preview ${project.title}`}
-                      onClick={() =>
-                        window.alert(
-                          "Add your project video URL here."
-                        )
-                      }
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="16"
-                        height="16"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M8 5L19 12L8 19V5Z"
-                          fill="#410099"
-                        />
-                      </svg>
-                    </button>
-                  )}
+                 <span className="winner-card__play" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                           <path d="M8 5.8c0-.8.9-1.3 1.6-.8l9.1 6.2a1 1 0 0 1 0 1.6l-9.1 6.2c-.7.5-1.6 0-1.6-.8V5.8Z" />
+                    </svg>
+                 </span>
+              </button>
+            )
+          ) : (
+            <>
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="projects-build__image"
+                  loading="lazy"
+                />
+              )}
 
-                </div>
+              {project.playable && (
+                <button
+                  type="button"
+                  className="projects-build__play"
+                  aria-label={`Preview ${project.title}`}
+                  onClick={() =>
+                    window.alert("Add your project video URL here.")
+                  }
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8 5L19 12L8 19V5Z"
+                      fill="#410099"
+                    />
+                  </svg>
+                </button>
+              )}
+            </>
+          )}
+        </div>
 
-                <div className="projects-build__card-content">
-                  <h4 className="projects-build__card-title">
-                    {project.title}
-                  </h4>
+        <div className="projects-build__card-content">
+          <h4 className="projects-build__card-title">
+            {project.title}
+          </h4>
 
-                  <p className="projects-build__card-description">
-                    {project.description}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <p className="projects-build__card-description">
+            {project.description}
+          </p>
+        </div>
+      </article>
+    );
+  })}
+</div>
 
           <div className="projects-build__tools">
             <span className="projects-build__tools-label">
