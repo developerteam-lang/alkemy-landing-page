@@ -4,7 +4,7 @@ const Hero = () => {
   // Replace these three image paths whenever you are ready.
   // The same three images are reused across all five sections.
   const images = [
-    "/images/hero/creative-skills.png",
+    "/images/hero/creative_skills.png",
     "/images/hero/academic-skills.png",
     "/images/hero/no-code-skills.png",
     "/images/hero/communication-skills.png",
