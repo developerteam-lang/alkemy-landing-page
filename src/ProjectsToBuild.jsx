@@ -9,6 +9,12 @@ const categories = [
   "Career Paths",
 ];
 
+const communicationVideoUrls = [
+  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
+  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
+  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
+  "https://www.youtube-nocookie.com/embed/fuosW7R-F4I",
+];
 const projectsData = {
   "Creative Skills": {
     heading: "From Creative Ideas To Finished Projects",
@@ -116,7 +122,7 @@ const projectsData = {
     ],
   },
 
-  Communication: {
+  "Communication": {
     heading: "Express Ideas With Confidence",
     description:
       "Develop storytelling, presentation and communication skills through creative projects, videos and engaging presentations.",
@@ -125,27 +131,26 @@ const projectsData = {
       {
         title: "No-Code Ideas in Action",
         description: "Create your own website with AI",
-        image:
-          "/images/projects-to-build/no-code-ideas-in-action.png",
+        // image:"/images/projects-to-build/no-code-ideas-in-action.png",
+        videoUrl:communicationVideoUrls[0]
       },
       {
         title: "App Prototype",
         description: "Design a simple app idea",
-        image:
-          "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=85",
+        // image:"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=85",
+        videoUrl:communicationVideoUrls[1]
       },
       {
         title: "Digital Portfolio",
         description: "Showcase your projects and creativity",
-        image:
-          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
-
+        // image:"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
+        videoUrl:communicationVideoUrls[2]
       },
       {
         title: "AI Business Idea",
         description: "Turn a creative idea into a prototype",
-        image:
-          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
+        image:"https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
+        videoUrl:communicationVideoUrls[3]
       },
     ],
   },
@@ -191,7 +196,6 @@ const ProjectsToBuild = () => {
   );
 
   const activeData = projectsData[activeCategory];
-
   return (
     <section className="projects-build">
       <div className="projects-build__header">
@@ -254,12 +258,20 @@ const ProjectsToBuild = () => {
                 key={`${activeCategory}-${project.title}`}
               >
                 <div className="projects-build__image-wrapper">
+                 
+                  {project.videoUrl ? (
+                 <iframe src={project.videoUrl} 
+                         title={project.title}
+                         className="projects-build__video"
+                           />  
+                ):(
                   <img
                     src={project.image}
                     alt={project.title}
                     className="projects-build__image"
                     loading="lazy"
                   />
+                )}
 
                   {project.playable && (
                     <button
@@ -285,6 +297,7 @@ const ProjectsToBuild = () => {
                       </svg>
                     </button>
                   )}
+
                 </div>
 
                 <div className="projects-build__card-content">
