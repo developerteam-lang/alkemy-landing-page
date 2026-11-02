@@ -10,7 +10,7 @@
   color: #090909;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
 }
-.live-classes *, .live-classes *::before, .live-classes *::after { box-sizing: border-box; }
+.live-classes, .live-classes *, .live-classes *::before, .live-classes *::after { box-sizing: border-box; }
 .live-classes__header { position: relative; z-index: 1; margin: 0 auto 29px; text-align: center; }
 .live-classes__eyebrow { margin: 0 0 10px; font-size: 11px; line-height: 1.2; font-weight: 700; letter-spacing: 1.4px; }
 .live-classes__main-title { margin: 0; color: #004f9e; font-size: clamp(29px, 3vw, 38px); line-height: 1.18; font-weight: 700; letter-spacing: -0.7px; }

@@ -158,13 +158,13 @@ const projectsData = {
         videoUrl:communicationVideoUrls[3],
         thumbnail:"/images/thumbnails/drishti-thumbnail.png"
       },
-      {
-        title: "Digital Portfolio",
-        description: "Showcase your projects and creativity",
+      // {
+      //   title: "Digital Portfolio",
+      //   description: "Showcase your projects and creativity",
         // image:"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
-        videoUrl:communicationVideoUrls[4],
-        thumbnail:"/images/thumbnails/anvi-thumbnail.png"
-      },
+      //   videoUrl:communicationVideoUrls[4],
+      //   thumbnail:"/images/thumbnails/anvi-thumbnail.png"
+      // },
     ],
   },
 
