@@ -20,6 +20,11 @@
   margin: 0 91px;
 }
 
+/* Track wrapper - Desktop */
+.ai-highlights__track {
+  display: contents;
+}
+
 /* All cards */
 .highlight-card {
   position: relative;
@@ -141,8 +146,14 @@
   max-width: 450px;
 }
 
+/* Hide carousel dots on Desktop and Tablet */
+.ai-highlights__dots {
+  display: none;
+}
+
 /* Tablet */
 @media (max-width: 850px) {
+
   .ai-highlights {
     padding: 22px;
   }
@@ -183,41 +194,154 @@
   }
 }
 
-/* Mobile */
+/* ==========================================
+   MOBILE - FIVE CARD HORIZONTAL CAROUSEL
+   ========================================== */
+
 @media (max-width: 520px) {
+
   .ai-highlights {
-    padding: 18px 15px;
+    padding: 18px 0 22px;
+    overflow: hidden;
   }
 
+  /* Horizontal scrolling container */
   .ai-highlights__grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 13px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
+  .ai-highlights__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Horizontal card track */
+  .ai-highlights__track {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+
+    width: max-content;
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+
+  /* Individual carousel cards */
+  .highlight-card,
   .highlight-card--learning,
   .highlight-card--videos,
   .highlight-card--access,
   .highlight-card--projects,
   .highlight-card--tools {
-    grid-column: 1;
+    flex: 0 0 78%;
+    width: 90px;
+    min-width: 50%;
+    max-width:15%;
+
+    height: 180px;
+    grid-column: auto;
+
+    border-radius: 15px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    margin-left:10px;
+  }
+
+  /* Mobile card text */
+  .highlight-card__text {
+    max-width: calc(100% - 25px);
+    padding: 20px 18px 0;
+    font-size: 16px;
+    line-height: 1.35;
+    letter-spacing: -0.25px;
+  }
+
+  /* Mobile illustrations */
+  .highlight-card__illustration {
+    right: 5px;
+    bottom: 0;
+    width: 115px;
+    height: 110px;
+  }
+
+  .highlight-card--projects .highlight-card__illustration {
+    right: 5px;
+    bottom: 0;
+    width: 120px;
+    height: 110px;
+  }
+
+  .highlight-card--tools .highlight-card__illustration {
+    right: 5px;
+    bottom: 0;
+    width: 125px;
+    height: 110px;
+  }
+
+  /* Card decorations */
+  .highlight-card__decoration {
+    right: -18px;
+    bottom: -78px;
+    width: 230px;
+    height: 130px;
+  }
+
+  .highlight-card--projects .highlight-card__decoration {
+    right: -5px;
+    bottom: -86px;
+    width: 240px;
+    height: 135px;
+  }
+
+  .highlight-card--tools .highlight-card__decoration {
+    right: -5px;
+    bottom: -91px;
+    width: 260px;
     height: 145px;
   }
 
-  .highlight-card__text {
-    max-width: calc(100% - 45px);
-    padding: 15px 15px 0;
-    font-size: 15px;
+  /* Mobile carousel navigation dots */
+  .ai-highlights__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    width: 100%;
+    margin-top: 17px;
   }
 
-  .highlight-card__illustration {
-    right: 5px;
-    width: 105px;
-    height: 105px;
+  .ai-highlights__dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background: #c4c4c4;
+    cursor: pointer;
+
+    transition:
+      background 0.25s ease,
+      transform 0.25s ease;
   }
 
-  .highlight-card--projects .highlight-card__illustration,
-  .highlight-card--tools .highlight-card__illustration {
-    width: 112px;
-    height: 105px;
+  .ai-highlights__dot.active {
+    background: #004f9e;
+    transform: scale(1.05);
   }
 }

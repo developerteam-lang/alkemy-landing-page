@@ -251,7 +251,7 @@ const ProjectsToBuild = () => {
         </div>
 
         <div
-          className="projects-build__panel"
+          className={`projects-build__panel projects-build__panel--${activeCategory.toLowerCase().replace(/\s+/g, "-")}`}
           role="tabpanel"
         >
           <div className="projects-build__intro">

@@ -1,4 +1,4 @@
-
+import { useRef, useState } from "react";
 import "./AIProgramHighlights.css";
 
 const highlights = [
@@ -7,7 +7,7 @@ const highlights = [
     className: "highlight-card--learning",
     text: (
       <>
-       4 weeks / 100% virtual of
+        4 weeks / 100% virtual of
         <br />
         Guided Live Learning
       </>
@@ -52,7 +52,7 @@ const highlights = [
       <>
         AI Lab with 1.5 hours session,
         <br />
-       100% virtual
+        100% virtual
         <br />
         &amp; 2 weeks
       </>
@@ -66,51 +66,13 @@ const highlights = [
           </linearGradient>
         </defs>
         <ellipse cx="59" cy="99" rx="39" ry="8" fill="#9d6be1" opacity=".24" />
-        <rect
-          x="25"
-          y="28"
-          width="73"
-          height="61"
-          rx="17"
-          fill="#ff8795"
-          opacity=".45"
-        />
-        <rect
-          x="20"
-          y="32"
-          width="78"
-          height="62"
-          rx="17"
-          fill="url(#playButton)"
-        />
-        <rect
-          x="23"
-          y="35"
-          width="72"
-          height="55"
-          rx="14"
-          fill="#ff566c"
-        />
+        <rect x="25" y="28" width="73" height="61" rx="17" fill="#ff8795" opacity=".45" />
+        <rect x="20" y="32" width="78" height="62" rx="17" fill="url(#playButton)" />
+        <rect x="23" y="35" width="72" height="55" rx="14" fill="#ff566c" />
         <path d="M52 47 Q52 43 57 46 L77 59 Q81 62 77 65 L57 78 Q52 81 52 76Z" fill="#e82c4a" opacity=".25" />
         <path d="M49 45 Q49 41 54 44 L75 58 Q79 61 75 64 L54 78 Q49 81 49 76Z" fill="#fff" />
-        <rect
-          x="91"
-          y="14"
-          width="9"
-          height="19"
-          rx="4.5"
-          transform="rotate(22 91 14)"
-          fill="#ffbd22"
-        />
-        <rect
-          x="106"
-          y="24"
-          width="9"
-          height="17"
-          rx="4.5"
-          transform="rotate(48 106 24)"
-          fill="#ffb21a"
-        />
+        <rect x="91" y="14" width="9" height="19" rx="4.5" transform="rotate(22 91 14)" fill="#ffbd22" />
+        <rect x="106" y="24" width="9" height="17" rx="4.5" transform="rotate(48 106 24)" fill="#ffb21a" />
       </svg>
     ),
   },
@@ -121,7 +83,7 @@ const highlights = [
       <>
         Life-time Access to Digital Marketing,
         <br />
-        Course Recordings, Continued 
+        Course Recordings, Continued
         <br />
         Practice.
       </>
@@ -229,22 +191,108 @@ function HighlightCard({ item }) {
   return (
     <article className={`highlight-card ${item.className}`}>
       <p className="highlight-card__text">{item.text}</p>
+
       <div className="highlight-card__decoration" aria-hidden="true" />
-      <div className="highlight-card__illustration">{item.icon}</div>
+
+      <div className="highlight-card__illustration">
+        {item.icon}
+      </div>
     </article>
   );
 }
 
-function AIProgramHighlights(){
-    return(
-        <section className="ai-highlights" aria-label="AI program highlights">
-            <div className="ai-highlights__grid">
-                {highlights.map((item) => (
-                    <HighlightCard key={item.id} item={item} />
-                ))}
-            </div>
-        </section>
+function AIProgramHighlights() {
+  const carouselRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-    )
+  // Update active dot when the user swipes the carousel.
+  const handleScroll = () => {
+    if (!carouselRef.current) return;
+
+    const container = carouselRef.current;
+    const cards = container.querySelectorAll(".highlight-card");
+
+    if (!cards.length) return;
+
+    const containerCenter =
+      container.getBoundingClientRect().left +
+      container.clientWidth / 2;
+
+    let closestIndex = 0;
+    let smallestDistance = Infinity;
+
+    cards.forEach((card, index) => {
+      const cardCenter =
+        card.getBoundingClientRect().left +
+        card.clientWidth / 2;
+
+      const distance = Math.abs(containerCenter - cardCenter);
+
+      if (distance < smallestDistance) {
+        smallestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    setActiveIndex(closestIndex);
+  };
+
+  // Navigate to a particular card when a dot is clicked.
+  const goToSlide = (index) => {
+    if (!carouselRef.current) return;
+
+    const cards = carouselRef.current.querySelectorAll(".highlight-card");
+
+    if (cards[index]) {
+      cards[index].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+
+      setActiveIndex(index);
+    }
+  };
+
+  return (
+    <section
+      className="ai-highlights"
+      aria-label="AI program highlights"
+    >
+      <div
+        className="ai-highlights__grid"
+        ref={carouselRef}
+        onScroll={handleScroll}
+      >
+        <div className="ai-highlights__track">
+          {highlights.map((item) => (
+            <HighlightCard key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Carousel Navigation Dots */}
+      <div
+        className="ai-highlights__dots"
+        role="tablist"
+        aria-label="Program highlight slides"
+      >
+        {highlights.map((item, index) => (
+          <button
+            key={item.id}
+            type="button"
+            className={`ai-highlights__dot ${
+              activeIndex === index ? "active" : ""
+            }`}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to highlight ${index + 1}`}
+            aria-selected={activeIndex === index}
+            role="tab"
+          />
+        ))}
+      </div>
+    </section>
+  );
 }
+
 export default AIProgramHighlights;
