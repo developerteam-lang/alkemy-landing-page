@@ -192,7 +192,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 13px;
   padding-left: 8px;
 }
 
@@ -212,8 +212,8 @@
 
 .toi-footer__youtube img {
   display: block;
-  width: 27px;
-  height: 21px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
