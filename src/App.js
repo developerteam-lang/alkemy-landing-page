@@ -15,6 +15,8 @@ import AILab from './AILab';
 import LiveToolOrbit from './LiveToolOrbit';
 import MentorSection from './MentorSection';
 import Footer from './Footer';
+
+import ChatWithUs from "./ChatWithUs";
 function App() {
   return (
     <>
@@ -30,7 +32,7 @@ function App() {
       </div>
       <TrustedSchools />
       <ProjectsToBuild />
-      <LiveClasses />
+      {/* */}<LiveClasses /> 
     <div className="topImage">
          <AILab />
       </div>
@@ -41,6 +43,8 @@ function App() {
       <WinnersSection />
       <WinterCampFAQ />
       <Footer /> 
+
+      <ChatWithUs />      
     </>
   );
 }

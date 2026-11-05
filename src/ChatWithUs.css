@@ -1,0 +1,96 @@
+
+/* FLOATING CHAT WITH US BUTTON */
+.chat-with-us {
+  position: fixed;
+  left: 20px;
+  bottom: 38px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 1px 25px;
+  min-height: 58px;
+
+  background-color: #20c96b;
+  color: #ffffff;
+
+  border-radius: 35px;
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(-120px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* VISIBLE AFTER SCROLLING */
+.chat-with-us.chat-with-us--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* WHATSAPP ICON */
+.chat-with-us svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+/* HOVER EFFECT */
+.chat-with-us:hover {
+  background-color: #17b95d;
+  color: #ffffff;
+}
+
+/* TABLET */
+@media (max-width: 700px) {
+  .chat-with-us {
+    left: 15px;
+    bottom: 28px;
+    min-height: 50px;
+    padding: 11px 16px;
+    font-size: 15px;
+    gap: 7px;
+  }
+
+  .chat-with-us svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 520px) {
+  .chat-with-us {
+    left: 12px;
+    bottom: 22px;
+    min-height: 46px;
+    padding: 10px 15px;
+    font-size: 14px;
+    gap: 7px;
+  }
+
+  .chat-with-us svg {
+    width: 20px;
+    height: 20px;
+  }
+}

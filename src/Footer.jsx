@@ -26,6 +26,44 @@ export default function Footer() {
           <p className="toi-footer__copyright">
             © 2026 Alkemy EdTech is a brand of AquityX (OPC) Private Limited. All rights reserved.
           </p>
+           {/*<div style={{display:"grid"}}>
+            <div style={{paddingRight:"10px"}}><a href="https://www.youtube.com/@alkemyedtech">Youtube</a> </div> 
+            <div><a href="https://www.instagram.com/alkemyedtech">Instagram</a></div>
+          </div>  */}
+           {/* SOCIAL MEDIA ICONS */}
+          <div className="toi-footer__social-media">
+
+            {/* YOUTUBE */}
+            <a
+              href="https://www.youtube.com/@alkemyedtech"
+              className="toi-footer__social-link toi-footer__youtube"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Alkemy EdTech on YouTube"
+            >
+              <img
+                src="https://cdn.simpleicons.org/youtube/FF0033"
+                alt="YouTube"
+              />
+              <span>YouTube</span>
+            </a>
+
+            {/* INSTAGRAM */}
+            <a
+              href="https://www.instagram.com/alkemyedtech"
+              className="toi-footer__social-link toi-footer__instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Alkemy EdTech on Instagram"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                alt="Instagram"
+              />
+            </a>
+
+          </div>
+
         </div>
 
         {/* RIGHT SIDE: CONTACT DETAILS */}
