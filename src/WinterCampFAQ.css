@@ -110,7 +110,8 @@
 }
 
 .winter-faq__item--open .winter-faq__toggle {
-  background: #d9baff;
+  background: #004f9e;
+  color:white;
 }
 
 /* Answer */
