@@ -134,14 +134,14 @@ const projectsData = {
         description: "Create your own website with AI",
         // image:"/images/projects-to-build/no-code-ideas-in-action.png",
         videoUrl:communicationVideoUrls[0],
-        thumbnail:"/images/thumbnails/kimmaya-thumbnail-two.png"
+        thumbnail:"/images/thumbnails/kimmaya-thumbnail.png"
       },
       {
         title: "App Prototype",
         description: "Design a simple app idea",
         // image:"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&q=85",
         videoUrl:communicationVideoUrls[1],
-        thumbnail:"/images/thumbnails/shazain-thumbnail-two.png"
+        thumbnail:"/images/thumbnails/shazain-thumbnail.png"
 
       },
       {
@@ -149,14 +149,14 @@ const projectsData = {
         description: "Showcase your projects and creativity",
         // image:"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&q=85",
         videoUrl:communicationVideoUrls[2],
-        thumbnail:"/images/thumbnails/kaustabh-thumbnail-two.png"
+        thumbnail:"/images/thumbnails/kaustabh-thumbnail.png"
       },
       {
         title: "AI Business Idea",
         description: "Turn a creative idea into a prototype",
         // image:"https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=85",
         videoUrl:communicationVideoUrls[3],
-        thumbnail:"/images/thumbnails/drishti-thumbnail-two.png"
+        thumbnail:"/images/thumbnails/drishti-thumbnail.png"
       },
       // {
       //   title: "Digital Portfolio",

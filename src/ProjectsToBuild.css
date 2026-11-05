@@ -157,7 +157,7 @@
 width: 100%;
 height: 100%;
 object-fit: cover;
-object-position: center;
+object-position: start;
 transition: transform 220ms ease;
 }
 
@@ -381,7 +381,7 @@ transition: transform 220ms ease;
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 220ms ease;
 }
 
@@ -445,4 +445,57 @@ transition: transform 220ms ease;
     width: 19px;
     height: 19px;
   }
+}
+
+
+/* ==========================================
+   COMMUNICATION - VIDEO THUMBNAIL FIX
+   Desktop only
+   ========================================== */
+
+@media (min-width: 601px) {
+
+  .projects-build__panel--communication
+  .projects-build__image-wrapper {
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .projects-build__panel--communication
+  .projects-build__thumbnail-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+  }
+
+  .projects-build__panel--communication
+  .projects-build__thumbnail-button .projects-build__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .projects-build__panel--communication
+  .projects-build__video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: #000;
+  }
+
 }
