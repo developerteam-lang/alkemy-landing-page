@@ -45,7 +45,7 @@ export default function Footer() {
                 src="https://cdn.simpleicons.org/youtube/FF0033"
                 alt="YouTube"
               />
-              <span>YouTube</span>
+              {/* <span>YouTube</span> */}
             </a>
 
             {/* INSTAGRAM */}
