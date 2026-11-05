@@ -357,6 +357,7 @@
 
   .mentor-card {
     height: 232px;
+    margin-left:100px;
   }
 
   .mentor-card__details {
