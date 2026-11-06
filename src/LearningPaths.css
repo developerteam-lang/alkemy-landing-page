@@ -93,14 +93,14 @@
 
 .learning-table__plan h3 {
   margin: 0 0 3px;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.2;
   font-weight: 500;
 }
 
 .learning-table__duration {
   margin: 0 0 5px;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.2;
 }
 
@@ -137,7 +137,7 @@
   min-width: 0;
   padding: 7px 11px;
   border-right: 1px solid #e1e1e1;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.45;
 }
 
@@ -184,7 +184,7 @@
   justify-content: center;
   text-align: center;
   border-right: 1px solid #e5e5e5;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.3;
 }
 
