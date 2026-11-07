@@ -15,22 +15,27 @@ const Hero = () => {
     {
       title: "Creative Skills",
       image: images[0],
+      description: "Explore ideas, express creativity, and build skills through hands-on projects."
     },
     {
       title: "Academic Skills",
       image: images[1],
+      description:"Strengthen subject knowledge through interactive and practical learning."
     },
     {
       title: "No-Code Skills",
       image: images[2],
+      description:"Build apps, websites, and digital solutions without coding."
     },
     {
       title: "Communication Skills",
       image: images[3],
+      description:"Express ideas clearly, build confidence, and communicate effectively."
     },
     {
       title: "Career Discovery",
       image: images[4],
+      description:"Explore career paths, discover interests, and prepare for future opportunities."
     },
   ];
 
@@ -814,8 +819,9 @@ const Hero = () => {
                 <div className="winter-hero-card-footer">
                   <h3>{activeSkill.title}</h3>
                   <p>
-                    Explore new ideas, learn by doing, and build skills for
-                    tomorrow.
+                    {/* Explore new ideas, learn by doing, and build skills for
+                    tomorrow. */}
+                    {activeSkill.description}
                   </p>
                 </div>
               </div>
