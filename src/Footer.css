@@ -205,6 +205,39 @@
   flex-shrink: 0;
 }
 
+
+.toi-footer__social-twitter-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  /* width: 30px;
+  height: 36px;
+  flex: 0 0 20px;
+  transition: opacity 0.2s ease, transform 0.2s ease; */
+}
+.toi-footer__social-facebook-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.toi-footer__social-snapchat-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+}
+
 /* YouTube */
 .toi-footer__youtube {
   gap: 3px;

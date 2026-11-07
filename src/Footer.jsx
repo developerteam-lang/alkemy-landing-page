@@ -61,7 +61,45 @@ export default function Footer() {
                 alt="Instagram"
               />
             </a>
-
+            
+               {/* TWITTER / X */}
+            <a
+              href="https://x.com/AlkemyEdtech_"
+              className="toi-footer__social-twitter-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Alkemy EdTech on X"
+            >
+              <img
+                src="https://cdn.simpleicons.org/x/FFFFFF"
+                alt="X"
+              />
+            </a>
+            
+             <a
+              href="https://www.facebook.com/AlkemyEdTech/"
+              className="toi-footer__social-facebook-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Alkemy EdTech on Facebook"
+            >
+              <img
+                src="https://cdn.simpleicons.org/facebook/1877F2"
+                alt="Facebook"
+              />
+            </a>
+            <a
+              href="https://snapchat.com/t/ZhS8Lc9z"
+              className="toi-footer__social-snapchat-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Alkemy EdTech on Snapchat"
+            >
+              <img
+                src="https://cdn.simpleicons.org/snapchat/FFFC00"
+                alt="Snapchat"
+              />
+            </a>
           </div>
 
         </div>
