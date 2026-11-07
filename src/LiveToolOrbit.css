@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 .tool-orbit-section {
@@ -8,25 +9,27 @@
 }
 
 .tool-orbit-stage {
-width: 100%;
+  width: 100%;
   max-width: 1193px;
-  height: 464px;
+  height: 520px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
-/* Tools wrapper: desktop layout remains unchanged */
+/* Desktop orbit wrapper */
 .tool-orbit-tools {
   position: static;
 }
 
+/* All icons follow their calculated elliptical positions */
 .tool-orbit-item {
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 64px;
+  width: 112px;
   text-align: center;
+  will-change: left, top;
 }
 
 .tool-orbit-counterspin {
@@ -111,44 +114,22 @@ width: 100%;
   font-weight: 700;
 }
 
-@keyframes tool-orbit-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes tool-orbit-counterspin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .tool-orbit-track,
-  .tool-orbit-counterspin {
-    animation: none;
+  .tool-orbit-item {
+    will-change: auto;
   }
 }
 
 /* =========================================
    MOBILE ONLY
-   Desktop styles above remain unchanged.
+   Original mobile design preserved.
    ========================================= */
 @media (max-width: 700px) {
   .tool-orbit-section {
     overflow: hidden;
   }
 
-  /* Allow the heading and complete tool list to
-     determine the section's total height. */
   .tool-orbit-stage {
     display: flex;
     flex-direction: column;
@@ -162,7 +143,6 @@ width: 100%;
     overflow: visible;
   }
 
-  /* Heading and badges appear before the tools. */
   .tool-orbit-center {
     position: relative;
     order: 1;
@@ -222,18 +202,7 @@ width: 100%;
     max-width: 320px;
     margin: 0 auto;
   }
-  
-  /*
-  @media (min-width: 701px) {
-  .tool-orbit-item[style*="23.9%"] {
-    top: 27.5% !important;
-  }
 
-  .tool-orbit-item[style*="21.7%"] {
-    top: 64.5% !important;
-  }
-}
-*/
   /* Remove desktop absolute coordinates on mobile. */
   .tool-orbit-item {
     position: relative;
