@@ -144,7 +144,7 @@ export default function LearningPaths() {
               <p className="learning-table__duration">{plan.duration}</p>
 
               <div className="learning-table__price">
-                {plan.price} 
+                {/* {plan.price}  */}
                 {/* <small>+ GST</small> */}
               </div>
             </div>

@@ -13,7 +13,7 @@ import ProjectsToBuild from './ProjectsToBuild';
 import LiveClasses from './LiveClasses';
 import AILab from './AILab';
 import LiveToolOrbit from './LiveToolOrbit';
-import MentorSection from './MentorSection';
+// import MentorSection from './MentorSection';
 import Footer from './Footer';
 
 import ChatWithUs from "./ChatWithUs";
@@ -37,7 +37,7 @@ function App() {
          <AILab />
       </div>
       <LiveToolOrbit />
-      <MentorSection />
+      {/* <MentorSection /> */}
       {/* <LiveClassSchedule /> */}
       <LearningPaths />
       <WinnersSection />
