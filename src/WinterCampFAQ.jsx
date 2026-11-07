@@ -4,25 +4,46 @@ import "./WinterCampFAQ.css";
 
 const faqItems = [
   {
-    question: "What is the AI Winter Camp for Students?",
+    question: "Does my child need coding experience?",
     answer:
-      "The AI Winter Camp is a guided learning program where students explore artificial intelligence, learn practical AI tools, and build creative projects through hands-on activities.",
+      "No coding is required. Children use no-code tools and prompt engineering, the same approach used by professional product teams. The program is designed for complete beginners.",
   },
   {
-    question: "Who can join the AI Winter Camp?",
+    question: "What grade levels is this for?",
     answer:
-      "Students from Classes 5–12 can join the AI Winter Camp. The program is designed to help students discover AI and develop useful skills through guided learning.",
+      "AI Explorers is designed for students in Grades 8 to 12. The curriculum adapts to different levels, so whether your child is in 8th grade or 12th, they will find it engaging and appropriately challenging. Younger children with a genuine interest in AI are also welcome. Reach out and we will help you decide if it is the right fit.",
   },
   {
-    question: "What will students learn in the AI Winter Camp?",
+    question: "What will my child have at the end of the program?",
     answer:
-      "Students will explore AI tools, academic applications, creative projects, and practical use cases. They will also work on assignments and projects with guided support.",
+      "Six outcomes: a working AI-powered product with a live URL, a product concept document, a personal prompt library, a Demo Day recording, an AI Literacy Certificate, and real presentation experience in front of a live audience.",
   },
   {
-    question: "Will students learn AI tools without coding?",
+    question: "How does this help with college applications?",
     answer:
-      "Yes. Students can explore many AI tools without coding. They will learn how to use AI for creative projects, productivity, learning, and other practical applications.",
+      "Your child finishes with a live product URL, a documented concept, and a demo recording. These are concrete artifacts they can present in SOPs, interviews and portfolios, assets most applicants simply do not have.",
   },
+   {
+    question: "What is Demo Day?",
+    answer:"On the Saturday of week 2, your child presents their product live to parents, peers and evaluators in a 2-hour virtual session. Audience members scan QR codes to try each product on their own phones. There are peer awards for Best Innovation, Best Design, Best Social Impact and Best Presentation."
+   },
+   {
+    question: "How are sessions conducted?",
+    answer:"A 2-week program: 10 live online sessions, Monday to Friday, 1.5 hours per session (15 hours total), 7:00 to 8:30 pm IST (5:30 to 7:00 pm UAE). Every session is live and trainer-led with direct interaction, and your child can message trainers between sessions via WhatsApp."
+   },
+   {
+     question:"How much work is there between sessions?",
+     answer:"Light, structured tasks between sessions keep the build moving. Three artifacts are produced outside live hours (the Prompt Library, the Product Concept Document and the Demo Day slides) so that 15 live hours can carry six outcomes."
+   },
+   {
+    question:"Will I receive updates during the program?",
+    answer:"Yes. You receive progress updates throughout the 2 weeks, your child's nightly build log is shared with you at Demo Day, and post-program deliverables include the demo recording, product URL, documentation and certificate."
+   },
+   {
+    question:"What is the AI Trust Check?",
+    answer:"A 3-step framework your child learns: 1) Verify the facts, 2) Question the logic, 3) Add your own judgment. Introduced in Session 2, applied during research in Session 3, and habitual in every build session. It teaches children to use AI with intelligence and critical thinking, not dependence."
+   }
+
 ];
 
 export default function WinterCampFAQ() {
