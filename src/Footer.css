@@ -1,9 +1,9 @@
-/* Footer background */
+
+/* FOOTER BACKGROUND */
 .toi-footer {
   width: 100%;
   min-height: 128px;
-  /* #004f9e */
-  background-color:#01357f ; 
+  background-color: #01357f;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-/* Main footer layout */
+/* MAIN FOOTER LAYOUT */
 .toi-footer__inner {
   width: 100%;
   max-width: 1336px;
@@ -38,7 +38,7 @@
   min-width: 0;
 }
 
-/* Alkemy EdTech logo and text */
+/* ALKEMY LOGO */
 .toi-footer__logo {
   display: inline-flex;
   align-items: center;
@@ -47,7 +47,6 @@
   text-decoration: none;
 }
 
-/* Alkemy logo image */
 .toi-footer__logo-image {
   display: block;
   width: auto;
@@ -68,17 +67,17 @@
   white-space: nowrap;
 }
 
-/* Copyright */
+/* COPYRIGHT */
 .toi-footer__copyright {
   margin: 0;
   color: #8ba9c8;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  padding-left:8px;
+  padding-left: 8px;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE CONTACT */
 .toi-footer__contact {
   display: flex;
   flex-direction: column;
@@ -177,96 +176,78 @@
   }
 }
 
-/* div.social-media{
-  display:flex;
-  flex-direction: row;
-  gap:4;
-  color:white;
-} */
+/* =================================
+   SOCIAL MEDIA ICONS
+================================= */
 
-
-
-/* SOCIAL MEDIA ICONS */
 .toi-footer__social-media {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 13px;
+  gap: 6px;
   padding-left: 8px;
 }
 
+/* INDIVIDUAL ICON BUTTON */
 .toi-footer__social-link {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  min-height: 27px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(180, 210, 255, 0.25);
+  border-radius: 9px;
+
   text-decoration: none;
   cursor: pointer;
   flex-shrink: 0;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
-
-.toi-footer__social-twitter-link{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  /* width: 30px;
-  height: 36px;
-  flex: 0 0 20px;
-  transition: opacity 0.2s ease, transform 0.2s ease; */
-}
-.toi-footer__social-facebook-link{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
-.toi-footer__social-snapchat-link{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: pointer;
-  width: 17px;
-  height: 17px;
-}
-
-/* YouTube */
-.toi-footer__youtube {
-  gap: 3px;
-}
-
-.toi-footer__youtube img {
+/* ICON IMAGE */
+.toi-footer__social-link img {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   object-fit: contain;
-}
-
-.toi-footer__youtube span {
-  color: #ffffff;
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Instagram */
-.toi-footer__instagram img {
-  display: block;
-  width: 17px;
-  height: 17px;
-  object-fit: contain;
-}
-
-/* Hover */
-.toi-footer__social-link:hover {
+  filter: brightness(0) invert(1);
   opacity: 0.85;
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* YELLOW HOVER EFFECT */
+.toi-footer__social-link:hover,
+.toi-footer__social-link:focus-visible {
+  background-color: #ffdf00;
+  border-color: #ffdf00;
+  box-shadow: 0 0 9px rgba(255, 223, 0, 0.35);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* CHANGE ICON TO DARK BLUE ON HOVER */
+.toi-footer__social-link:hover img,
+.toi-footer__social-link:focus-visible img {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(42%)
+    saturate(1750%) hue-rotate(188deg) brightness(90%) contrast(105%);
+  opacity: 1;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+.toi-footer__social-link:focus-visible {
+  outline: 2px solid #ffdf00;
+  outline-offset: 3px;
 }
