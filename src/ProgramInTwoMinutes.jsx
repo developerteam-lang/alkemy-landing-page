@@ -80,10 +80,10 @@ const ProgramInTwoMinutes = ({
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <path
+         <path
           d="M-40 145 C100 245, 180 0, 330 75 S530 200, 690 130 S900 85, 1040 145 S1250 45, 1480 65"
           fill="none"
-          stroke="#FFF2D1"
+          stroke="#ffee99"
           strokeWidth="22"
           strokeLinecap="round"
         />

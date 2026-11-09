@@ -155,7 +155,7 @@ const highlights = [
     className: "highlight-card--tools",
     text: (
       <>
-        Structured Learning in Open Edex LMS
+        Structured Learning in LMS
         <br />
         Courses &amp; Recordings
       </>

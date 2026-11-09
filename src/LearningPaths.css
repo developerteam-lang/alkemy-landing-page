@@ -1,7 +1,8 @@
 .learning-paths {
   width: 100%;
   padding: 15px 16px 6px;
-  background: linear-gradient(110deg, #fffdfa 0%, #fff8ef 100%);
+  /* linear-gradient(110deg, #fffdfa 0%, #fff8ef 100%) */
+  background: linear-gradient(110deg, #eef2f6 0%, #eef2f6 100%);
   color: #111111;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
