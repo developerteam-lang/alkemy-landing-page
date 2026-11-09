@@ -41,6 +41,29 @@ export default function Footer() {
 
         {/* LEFT SIDE: LOGO AND COPYRIGHT */}
         <div className="toi-footer__brand">
+          {/* <a
+            href="https://www.alkemyedtech.com"
+            className="toi-footer__logo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Alkemy EdTech"
+          >
+            <img
+              src="/logo.png"
+              alt="Alkemy EdTech Logo"
+              className="toi-footer__logo-image"
+            />
+           
+              <span className="toi-footer__logo-text">
+                ALKEMY EDTECH
+              </span>
+              
+          </a> */}
+           {/* <span clas="flex-col"> </span> */}
+          {/* <span>
+                  DPIIT-recognized startup
+               </span> 
+          */}
           <a
             href="https://www.alkemyedtech.com"
             className="toi-footer__logo"
@@ -53,8 +76,15 @@ export default function Footer() {
               alt="Alkemy EdTech Logo"
               className="toi-footer__logo-image"
             />
-            <span className="toi-footer__logo-text">
-              ALKEMY EDTECH
+
+            <span className="toi-footer__logo-content">
+              <span className="toi-footer__logo-text">
+                ALKEMY EDTECH
+              </span>
+
+              <span className="toi-footer__startup-text">
+                DPIIT-RECOGNIZED STARTUP
+              </span>
             </span>
           </a>
 
