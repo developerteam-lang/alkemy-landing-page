@@ -71,10 +71,10 @@ const Hero = () => {
           background:
             radial-gradient(
               circle at 90% 20%,
-              #fffbe5,
+              #fffff,
               transparent 32%
             ),
-            #fffcf5;
+            #fffff;
           color: #004f9e;
           font-family: Arial, Helvetica, sans-serif;
           margin-top:41px;
