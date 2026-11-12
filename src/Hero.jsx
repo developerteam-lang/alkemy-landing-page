@@ -99,7 +99,7 @@ const Hero = () => {
             ),
             linear-gradient(
               90deg,
-              #dae5f1 1px,
+              #ffffff 1px,
               transparent 1px
             );
           background-size: 28px 28px;
@@ -891,4 +891,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
