@@ -197,16 +197,16 @@ const Hero = () => {
           padding: 8px 12px;
           border: 1px solid #dfd0f6;
           border-radius: 30px;
-          background: #fff;
+          background: #fff7cc;
           color: #004f9e;
           font-size: 12px;
           font-weight: 600;
         }
 
         .winter-hero-tag:nth-child(2) {
-          border-color: #f0c4db;
-          background: #fff6fb;
-          color: #a02b6c;
+          border-color: #004f9e;
+          background: #ffffff;
+          color: black;
         }
 
         .winter-hero-benefits {
