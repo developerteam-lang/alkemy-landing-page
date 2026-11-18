@@ -74,7 +74,7 @@ const ProgramInTwoMinutes = ({
   return (
     <section className="program-preview">
       {/* Full-screen decorative wave */}
-      <svg
+      {/* <svg
         className="program-preview__wave"
         viewBox="0 0 1440 220"
         preserveAspectRatio="none"
@@ -87,7 +87,7 @@ const ProgramInTwoMinutes = ({
           strokeWidth="22"
           strokeLinecap="round"
         />
-      </svg>
+      </svg> */}
 
       <div className="program-preview__heading">
         <p className="program-preview__eyebrow">

@@ -118,7 +118,7 @@ const Hero = () => {
           top: 42%;
           width: 45%;
           height: 100px;
-          border-top: 12px solid rgb(255, 238, 153); 
+          border-top: 12px solid white; 
           border-radius: 50%;
           transform: rotate(12deg);
           pointer-events: none;

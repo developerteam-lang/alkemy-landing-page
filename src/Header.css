@@ -59,7 +59,7 @@
 a.site-header__logo h1{
    color:#004f9e;
    font-weight:600;
-   font-family: italic;
+   font-family: 'Neue Montreal', 'Sora', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
    font-size: 18px;
    text-transform:uppercase;
 }
@@ -95,8 +95,9 @@ a.site-header__logo h1 span{
   height: 40px;
   padding: 0 24px;
   border: none;
-  border-radius: 999px;
-  background:#ffee99;
+  border-radius: 999px; 
+  /* #ffee99; */
+  background: #ffe666;
   color: #1c0b57;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   font-size: 14px;
