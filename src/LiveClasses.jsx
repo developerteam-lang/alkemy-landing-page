@@ -246,8 +246,8 @@ export default function LiveClasses() {
 
   return (
     <section className="live-classes">
-      <div className="live-classes__decor live-classes__decor--top" />
-      <div className="live-classes__decor live-classes__decor--bottom" />
+      {/* <div className="live-classes__decor live-classes__decor--top" />
+      <div className="live-classes__decor live-classes__decor--bottom" /> */}
 
       <header className="live-classes__header">
         <p className="live-classes__eyebrow">

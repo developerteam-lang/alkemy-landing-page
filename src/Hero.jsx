@@ -195,9 +195,9 @@ const Hero = () => {
 
         .winter-hero-tag {
           padding: 8px 12px;
-          border: 1px solid #dfd0f6;
+          border: 1px solid #004f9e;
           border-radius: 30px;
-          background: #fff7cc;
+          background: #ffffff;
           color: #004f9e;
           font-size: 12px;
           font-weight: 600;
